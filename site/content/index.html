@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% import "partials/helpers.html" as helpers %}
+
+{% set images = [
+    'render_side1.png',
+    'render_side2.png',
+    'render_side3.png',
+    'render_side4.png'
+]%}
+
+{% block content %}
+<div class="grid-container">
+    <div class="grid-x grid-margin-x">
+        <div class="cell medium-6">
+            {{ helpers.image('render_final.png', class='thumbnail') }}
+            <div class="grid-x grid-margin-x">
+                {% for image in images %}
+                <div class="cell small-3">
+                    {{ helpers.image(image, class='thumbnail') }}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="cell medium-6">
+            <h3>Engravinator</h3>
+            <p>An open source laser engraver</p>
+            <p>The Engravinator is a laser engraver designed as an open source project with all the designs, builds and
+                instructions available for free.</p>
+            <p>Instead of being a laser engraver where you bring the piece to the engraver, we are designing the
+                Engravinator to be an engraver that you bring to your work piece. For example, if you are building a
+                large piece of furniture, you would clamp the Engravinator down to your work piece to engrave your
+                maker's mark.</p>
+            <p>Currently, we are in the design and prototyping phase of the project and will update this site, our <a
+                    href="https://github.com/ManiacalLabs/Engravinator">GitHub repository</a> and our <a
+                    href="https://twitter.com/engravinator">Twitter account</a> with our progress.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

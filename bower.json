@@ -1,0 +1,21 @@
+{
+  "name": "engravinator-home",
+  "description": "Home page for the Engravinator open source laser engraver project",
+  "main": "gulpfile.js",
+  "authors": [
+    "Patrick Connelly (patrick@connelly.dev)"
+  ],
+  "license": "GPL-3.0-or-later",
+  "homepage": "http://engravinator.com/",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-sites": "^6.5.3"
+  }
+}

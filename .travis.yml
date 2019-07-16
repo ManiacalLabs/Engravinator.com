@@ -1,0 +1,15 @@
+sudo: false
+branches:
+  only:
+  - master
+language: node_js
+node_js:
+  - "8"
+install:
+  - npm install -g gulp-cli
+  - npm install
+cache: npm
+script:
+- npm run bower
+- npm run lint
+- gulp deploy

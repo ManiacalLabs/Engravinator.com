@@ -1,0 +1,52 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    background-color: #000;
+}
+
+#wrapper {
+    min-height: 100%;
+    position: relative;
+    background-color: #fff;
+}
+
+footer, #menu, #footer-who a {
+    color: #b3b3b3;
+}
+
+footer {
+    border-top-width: 4px;
+    border-top-color: #f36926;
+    border-top-style: solid;
+    line-height: 60px;
+    height: 60px;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#menu {
+    border-bottom-width: 4px;
+    border-bottom-color: #f36926;
+    border-bottom-style: solid;
+}
+
+#menu, #menu ul {
+    background-color: #000;
+}
+
+.content {
+    margin-top: 20px;
+    padding-bottom: 60px;
+}
+
+#social-icons {
+    margin-right: 20px;
+}
+
+#footer-who {
+    margin-left: 20px;
+}
