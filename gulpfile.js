@@ -14,6 +14,7 @@ var path = require('path');
 var DIST = __dirname + '/dist';
 var DIST_SELECTOR = DIST + '/**/*';
 var SITE = __dirname + '/site';
+var CNAME_SELECTOR = SITE + '/assets/CNAME';
 
 var PATHS = {
     CSS: {
@@ -213,6 +214,15 @@ function watch() {
 }
 
 /**
+ * Copies the cname file over for deployment
+ * @returns {Object} The task stream
+ */
+function cname() {
+    return gulp.src(CNAME_SELECTOR)
+        .pipe(gulp.dest(DIST));
+}
+
+/**
  * Deploys the changes to the gh-pages branch
  * @returns {Object} The task stream
  */
@@ -230,4 +240,4 @@ exports.build = default_task;
 exports.clean = cleanall;
 exports.dist = default_task;
 exports.watch = gulp.series(default_task, watch);
-exports.deploy = gulp.series(default_task, ghpages);
+exports.deploy = gulp.series(default_task, cname, ghpages);
