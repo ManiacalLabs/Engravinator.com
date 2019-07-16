@@ -7,6 +7,10 @@ node_js:
 - '8'
 install:
 - npm install
+before_script:
+- git remote set-url origin "https://${GH_TOKEN}@github.com/pcon/handsontraining.git"
+- git config --global user.email "patrick@deadlypenguin.com"
+- git config --global user.name "Travis-CI"
 cache: npm
 script:
 - npm run bower

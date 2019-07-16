@@ -46,6 +46,7 @@
     "gulp-htmlmin": "^5.0.1",
     "gulp-nunjucks-render": "^2.2.3",
     "lodash": "^4.17.14",
+    "lodash.template": ">=4.5.0",
     "merge-stream": "^2.0.0",
     "nunjucks": "^3.2.0",
     "nunjucks-numeral-filter": "0.0.2",
