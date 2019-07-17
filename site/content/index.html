@@ -11,18 +11,11 @@
 {% block content %}
 <div class="grid-container">
     <div class="grid-x grid-margin-x">
-        <div class="cell medium-6">
-            {{ helpers.image('render_final.png', class='thumbnail') }}
-            <div class="grid-x grid-margin-x">
-                {% for image in images %}
-                <div class="cell small-3">
-                    {{ helpers.image(image, class='thumbnail') }}
-                </div>
-                {% endfor %}
+            <div class="cell medium-4">
+                {{ helpers.image('logos/logo_square_350.png') }}
             </div>
-        </div>
-        <div class="cell medium-6">
-            <h3>Engravinator</h3>
+        <div class="cell auto">
+            <h1>Engravinator</h1>
             <p>An open source laser engraver</p>
             <p>The Engravinator is a laser engraver designed as an open source project with all the designs, builds and
                 instructions available for free.</p>
@@ -33,6 +26,20 @@
             <p>Currently, we are in the design and prototyping phase of the project and will update this site, our <a
                     href="https://github.com/ManiacalLabs/Engravinator">GitHub repository</a> and our <a
                     href="https://twitter.com/TheEngravinator">Twitter account</a> with our progress.</p>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="grid-x grid-margin-x">
+        <div class="cell medium-6 medium-offset-3">
+            {{ helpers.image('render_final.png', class='thumbnail') }}
+            <div class="grid-x grid-margin-x">
+                {% for image in images %}
+                <div class="cell small-3">
+                    {{ helpers.image(image, class='thumbnail') }}
+                </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div>
