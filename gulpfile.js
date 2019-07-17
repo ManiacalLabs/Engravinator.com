@@ -139,7 +139,8 @@ function bowerstyles() {
 function customstyles() {
     return gulp.src(PATHS.CSS.SRC)
         .pipe(cleanCSS())
-        .pipe(gulp.dest(PATHS.CSS.DEST));
+        .pipe(gulp.dest(PATHS.CSS.DEST))
+        .pipe(connect.reload());
 }
 
 var styles = gulp.parallel(customstyles, bowerstyles);
