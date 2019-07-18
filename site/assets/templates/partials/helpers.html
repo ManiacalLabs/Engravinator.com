@@ -1,7 +1,11 @@
-{% macro getAbsolutePath(file) %}
+{% macro getAbsolutePath(site, file) -%}
 {{ site.urlRoot if site.urlRoot else "/" }}{{ file }}
-{% endmacro %}
+{%- endmacro %}
 
-{% macro image(url, class='') %}
-<img class="{{ class }}" src="{{site.urlRoot}}images/{{url}}">
-{% endmacro %}
+{% macro image(site, url, class='') -%}
+<img class="{{ class }}" src="{{ getAbsolutePath(site, 'images/' + url) }}">
+{%- endmacro %}
+
+{% macro getUrl(site) -%}
+{{ site.url }}/{{ site.path }}
+{%- endmacro %}

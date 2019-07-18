@@ -1,10 +1,12 @@
 {% import "partials/helpers.html" as helpers %}
+{% from "partials/header.html" import header %}
+{% from "partials/footer.html" import footer %}
 
 <!doctype html>
 <html class="no-js" lang="en">
 
 <head>
-    {% include "partials/headers.html" %}
+    {{ header(site, helpers) }}
 </head>
 
 <body>
@@ -15,11 +17,11 @@
             {% block content %}{% endblock %}
         </div>
 
-        {% include "partials/footer.html" %}
+        {{ footer(site, helpers) }}
     </div>
-    <script src="{{ helpers.getAbsolutePath('js/jquery.min.js') }}"></script>
-    <script src="{{ helpers.getAbsolutePath('js/what-input.min.js') }}"></script>
-    <script src="{{ helpers.getAbsolutePath('js/foundation.min.js') }}"></script>
+    <script src="{{ helpers.getAbsolutePath(site, 'js/jquery.min.js') }}"></script>
+    <script src="{{ helpers.getAbsolutePath(site, 'js/what-input.min.js') }}"></script>
+    <script src="{{ helpers.getAbsolutePath(site, 'js/foundation.min.js') }}"></script>
     <script>
         $(document).foundation();
     </script>

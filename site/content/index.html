@@ -12,7 +12,7 @@
 <div class="grid-container">
     <div class="grid-x grid-margin-x">
             <div class="cell medium-4">
-                {{ helpers.image('logos/logo_square_350.png') }}
+                {{ helpers.image(site, 'logos/logo_square_350.png') }}
             </div>
         <div class="cell auto">
             <h1>Engravinator</h1>
@@ -32,11 +32,11 @@
     <br />
     <div class="grid-x grid-margin-x">
         <div class="cell medium-6 medium-offset-3">
-            {{ helpers.image('render_final.png', class='thumbnail') }}
+            {{ helpers.image(site, 'render_final.png', class='thumbnail') }}
             <div class="grid-x grid-margin-x">
                 {% for image in images %}
                 <div class="cell small-3">
-                    {{ helpers.image(image, class='thumbnail') }}
+                    {{ helpers.image(site, image, class='thumbnail') }}
                 </div>
                 {% endfor %}
             </div>

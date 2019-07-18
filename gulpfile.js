@@ -47,10 +47,12 @@ var clean_params = {
     allowEmpty: true
 };
 
+var DEVEL = process.env.DEVEL ? true : false;
+
 var site = {
-    'title': 'Engravinator',
-    'url': 'http://localhost:9000',
-    'time': new Date()
+    title: 'Engravinator',
+    url: DEVEL ? 'http://localhost:9000' : 'https://engravinator.com',
+    time: new Date()
 };
 
 if (!process.env.URL_ROOT) {
@@ -162,6 +164,7 @@ function images() {
 function pageData(file) {
     var data_file = path.join(path.dirname(file.path), path.basename(file.path, '.html') + '.json');
     var data = { site: site };
+    data.site.path = path.basename(file.path);
 
     try {
         data.data = JSON.parse(fs.readFileSync(data_file));

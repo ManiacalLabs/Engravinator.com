@@ -1,13 +1,13 @@
-{% import "partials/helpers.html" as helpers %}
-
+{% macro footer(site, helpers) -%}
 <!-- Icons from feather https://feathericons.com/ -->
 <footer class="footer-nav hide-for-print">
     <div id="footer-who" class="float-left">
         <a href="https://maniacallabs.com/">A Maniacal Labs project</a>
     </div>
     <div id="social-icons" class="float-right">
-        <a href="https://github.com/ManiacalLabs/Engravinator">{{ helpers.image('social/github.png') }}</a>
-        <a href="https://instagram.com/TheEngravinator">{{ helpers.image('social/instagram.png') }}</a>
-        <a href="https://twitter.com/TheEngravinator">{{ helpers.image('social/twitter.png') }}</a>
+        <a href="https://github.com/ManiacalLabs/Engravinator">{{ helpers.image(site, 'social/github.png', 'social-icon') }}</a>
+        <a href="https://instagram.com/TheEngravinator">{{ helpers.image(site, 'social/instagram.png', 'social-icon') }}</a>
+        <a href="https://twitter.com/TheEngravinator">{{ helpers.image(site, 'social/twitter.png', 'social-icon') }}</a>
     </div>
 </footer>
+{%- endmacro %}

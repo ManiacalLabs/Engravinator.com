@@ -47,6 +47,10 @@ footer {
     margin-right: 20px;
 }
 
+.social-icon {
+    padding: 0px 6px;
+}
+
 #footer-who {
     margin-left: 20px;
 }
