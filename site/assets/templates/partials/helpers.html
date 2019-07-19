@@ -7,5 +7,5 @@
 {%- endmacro %}
 
 {% macro getUrl(site, path) -%}
-{{ site.url }}/{{ (path if path else site.path) | replace("index.html", "")}}
+{{ site.url }}{{ (path if path else site.path) | replace("index.html", "")}}
 {%- endmacro %}
