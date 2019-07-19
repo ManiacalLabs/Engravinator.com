@@ -12,5 +12,8 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Engravinator - The open source engraver" />
 <meta property="og:description" content="The Engravinator is an open source laser engraver for DYI enthusiasts." />
-<meta property="og:image" content="{{ helpers.getAbsolutePath(site, 'images/social/opengraph.png') }}" />
+<meta property="og:image" content="{{ helpers.getUrl(site, helpers.getAbsolutePath(site, 'images/social/opengraph.png')) }}" />
+<meta property="fb:app_id" content="901482400223319" />
+
+{% include "partials/google.html" %}
 {%- endmacro %}
