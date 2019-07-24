@@ -4,14 +4,13 @@
 {% set images = [
     'render_side1.png',
     'render_side2.png',
-    'render_side3.png',
-    'render_side4.png'
+    'render_side3.png'
 ]%}
 
 {% block content %}
 <div class="grid-container">
     <div class="grid-x grid-margin-x">
-            <div class="cell medium-4">
+            <div class="cell medium-4 text-center">
                 {{ helpers.image(site, 'logos/logo_square_350.png') }}
             </div>
         <div class="cell auto">
@@ -35,7 +34,7 @@
             {{ helpers.image(site, 'render_final.png', class='thumbnail') }}
             <div class="grid-x grid-margin-x">
                 {% for image in images %}
-                <div class="cell small-3">
+                <div class="cell small-4">
                     {{ helpers.image(site, image, class='thumbnail') }}
                 </div>
                 {% endfor %}
