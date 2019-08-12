@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     margin: 0px;
     padding: 0px;
     height: 100%;
@@ -11,7 +12,9 @@ html, body {
     background-color: #fff;
 }
 
-footer, #menu, #footer-who a {
+footer,
+#menu,
+#footer-who a {
     color: #b3b3b3;
 }
 
@@ -34,7 +37,8 @@ footer {
     border-bottom-style: solid;
 }
 
-#menu, #menu ul {
+#menu,
+#menu ul {
     background-color: #000;
 }
 
@@ -53,4 +57,12 @@ footer {
 
 #footer-who {
     margin-left: 20px;
+}
+
+.asterisk {
+    color: #f00;
+}
+
+.indicates-required {
+    font-size: .75em;
 }
