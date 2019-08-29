@@ -9,7 +9,7 @@
     "clean": "./node_modules/.bin/gulp clean",
     "deploy": "./node_modules/.bin/gulp deploy",
     "lint-eslint": "./node_modules/.bin/eslint gulpfile.js",
-    "lint-md": "./node_modules/.bin/remark --no-stdout -f *.md",
+    "lint-md": "./node_modules/.bin/remark --no-stdout -f *.md .github/ISSUE_TEMPLATE/*.md",
     "lint": "npm run lint-eslint && npm run lint-md",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "export DEVEL=true && ./node_modules/.bin/gulp watch"
@@ -36,7 +36,7 @@
   "dependencies": {},
   "devDependencies": {
     "bower": "^1.8.8",
-    "eslint": "^6.0.1",
+    "eslint": "^6.2.2",
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-clean-css": "^4.2.0",
