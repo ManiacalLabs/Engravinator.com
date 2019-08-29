@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% import "partials/helpers.html" as helpers %}
+
+{% block content %}
+<div class="grid-container">
+    <div class="grid-x grid-margin-x">
+        <div class="cell medium-4 text-center">
+            {{ helpers.image(site, 'logos/logo_square_350.png') }}
+        </div>
+        <div class="cell auto">
+            <h1>Engravinator</h1>
+            <p>Welp, this is awkward. Looks like our laser accidentally burt the page you were looking for. If you got
+                to this page from an external link, please tell whomever sent you here that they've got a bad link. If
+                you followed a link on our site to here, please <a href="https://github.com/ManiacalLabs/Engravinator.com/issues/new?template=404.md">report the problem</a> on our GitHub issues
+                page and we'll fix it ASAP.</p>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="grid-x grid-margin-x">
+        <div class="cell medium-4">
+            {% include "partials/signup.html" %}
+        </div>
+    </div>
+</div>
+{% endblock %}
