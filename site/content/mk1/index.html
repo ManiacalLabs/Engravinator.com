@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% import "partials/helpers.html" as helpers %}
+
+{% block content %}
+<div class="grid-container">
+    <div class="grid-x grid-margin-x">
+        <div class="cell text-center">
+            <h1>Engravinator MK1</h1>
+            <img src="https://via.placeholder.com/800x300" />
+        </div>
+
+        <div class="cell margin-medium-vertical">
+            <h1 class="text-center">Awesome Features</h1>
+            <div class="grid-x grid-margin-x grid-margin-y">
+                {% for feature in data.highlighted_features %}
+                <div class="cell medium-4">
+                    <h2 class="h3">{{ feature.title }}</h2>
+                    <img class="thumbnail" src="{{ feature.image }}" />
+                    <p>{{ feature.copy | safe }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="cell margin-medium-bottom">
+            <h1 class="text-center">Assemble Your Own</h1>
+            <div class="grid-x grid-margin-x grid-margin-y">
+                {% for build_step in data.build_steps %}
+                <div class="cell medium-4">
+                    <div class="media-object">
+                        <div class="media-object-section align-self-middle">
+                            <div>
+                                <a href="{{ build_step.url }}">{{ helpers.image(site, build_step.icon) }}</a>
+                            </div>
+                        </div>
+                        <div class="media-object-section">
+                            <h2 class="h3"><a href="{{ build_step.url }}">{{ build_step.title }}</a></h2>
+                            <p>{{ build_step.subtitle }}</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <p>{{ build_step.copy | safe }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="cell margin-medium-bottom">
+            <h1 class="text-center">Features</h1>
+            <div class="cell medium-8 large-offset-2">
+                <ul>
+                    {% for feature in data.features %}
+                    <li>{{ feature | safe }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
