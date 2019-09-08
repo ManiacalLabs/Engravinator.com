@@ -1,5 +1,4 @@
-html,
-body {
+html, body {
     margin: 0px;
     padding: 0px;
     height: 100%;
@@ -12,10 +11,12 @@ body {
     background-color: #fff;
 }
 
-footer,
-#menu,
-#footer-who a {
+footer, #menu, #footer-who a, .title-bar, .menu-icon {
     color: #b3b3b3;
+}
+
+.title-bar-title {
+    margin-left: 5px;
 }
 
 footer {
@@ -37,9 +38,13 @@ footer {
     border-bottom-style: solid;
 }
 
-#menu,
-#menu ul {
+#menu, #menu ul {
     background-color: #000;
+}
+
+#menu ul li a {
+    color: #b3b3b3;
+    font-weight: bold;
 }
 
 .content {

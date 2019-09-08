@@ -1,7 +1,13 @@
-<div class="top-bar hide-for-print" id="menu">
+<div class="title-bar" data-responsive-toggle="menu" data-hide-for="medium">
+    <button class="menu-icon" type="button" data-toggle="menu"></button>
+    <div class="title-bar-title">Engravinator</div>
+</div>
+
+<div class="top-bar" id="menu">
     <div class="top-bar-left">
-        <ul class="vertical medium-horizontal menu">
-            <li class="menu-text">{{ site.title }}</li>
+        <ul class="dropdown menu" data-dropdown-menu>
+            <li class="menu-text show-for-medium">{{ site.title }}</li>
+            <li><a href="https://forum.maniacallabs.com/c/engravinator">Forum</a></li>
         </ul>
     </div>
 </div>
