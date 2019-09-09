@@ -1,3 +1,57 @@
 {
-	"page_title": "Engravinator MK1 &mdash; Buy"
+	"page_title": "Engravinator MK1 &mdash; Buy",
+	"bom": {
+		"section_order": [
+			"hardware",
+			"motion",
+			"electronics"
+		],
+		"hardware": {
+			"section_title": "Hardware Components",
+			"parts": []
+		},
+		"motion": {
+			"section_title": "Motion Components",
+			"parts": []
+		},
+		"electronics": {
+			"section_title": "Electronics Components",
+			"parts": [
+				{
+					"name": "Stepper Motor",
+					"quantity": 2,
+					"order_number": "17HS13-1334S",
+					"url": "https://www.omc-stepperonline.com/nema-17-bipolar-18deg-22ncm-31ozin-133a-28v-42x42x34mm-4-wires-17hs13-1334s.html",
+					"price": 8.66
+				},
+				{
+					"name": "Control Board",
+					"quantity": 1,
+					"order_number": "Playtapus",
+					"price": 25
+				},
+				{
+					"name": "10A @ 12V Power Supply",
+					"quantity": 1,
+					"order_number": "Amazon",
+					"url": "https://www.amazon.com/gp/product/B00LWQ2GS0",
+					"price": 17.88
+				},
+				{
+					"name": "Limit Switch",
+					"quantity": 2,
+					"order_number": "D2F-01FL3-D3",
+					"url": "https://www.digikey.com/product-detail/en/omron-electronics-inc-emc-div/D2F-01FL3-D3/Z4674-ND/4947669",
+					"price": 1
+				},
+				{
+					"name": "TMC2100 STEPSTICK",
+					"quantity": 2,
+					"order_number": "1460-1159-ND",
+					"url": "https://www.digikey.com/product-detail/en/trinamic-motion-control-gmbh/TMC-SILENTSTEPSTICK/1460-1159-ND/5724190",
+					"price": 7.98
+				}
+			]
+		}
+	}
 }

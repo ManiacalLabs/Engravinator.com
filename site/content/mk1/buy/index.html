@@ -9,7 +9,34 @@
         </div>
 
         <div class="cell">
-            BUY
+            {% for section_name in data.bom.section_order %}
+            {% set section=data.bom[section_name] %}
+            <h2>{{ section.section_title }}</h2>
+            <table>
+                <thead>
+                    <th>Part Name</th>
+                    <th>Order Number</th>
+                    <th class="text-center">Quantity</th>
+                    <th class="text-center">Unit Price</th>
+                    <th class="text-center">Total Price</th>
+                </thead>
+                <tbody>
+                    {% for part in section.parts %}
+                    <tr>
+                        <td>{{ part.name }}</td>
+                        {% if part.url %}
+                        <td><a href="{{ part.url }}">{{ part.order_number }}</a></td>
+                        {% else %}
+                        <td>{{ part.order_number }}</td>
+                        {% endif %}
+                        <td class="text-center">{{ part.quantity }}</td>
+                        <td class="text-center">{{ part.price | numeral("$0,0.00") }}</td>
+                        <td class="text-center">{{ (part.quantity * part.price) | numeral("$0,0.00") }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% endfor %}
         </div>
     </div>
 </div>
