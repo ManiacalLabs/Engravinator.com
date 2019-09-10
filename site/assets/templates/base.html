@@ -1,6 +1,7 @@
 {% import "partials/helpers.html" as helpers %}
 {% from "partials/header.html" import header %}
 {% from "partials/footer.html" import footer %}
+{% from "partials/navigation.html" import navigation%}
 
 <!doctype html>
 <html class="no-js" lang="en">
@@ -11,7 +12,7 @@
 
 <body>
     <div id="wrapper">
-        {% include "partials/navigation.html" %}
+        {{ navigation(site, helpers) }}
 
         <div class="content">
             {% block content %}{% endblock %}
