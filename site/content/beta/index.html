@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% import "partials/helpers.html" as helpers %}
+
+{% block content %}
+<div class="grid-container">
+    <div class="grid-x grid-margin-x">
+        <div class="cell medium-8 medium-offset-2">
+            <h1>Beta Tester Request Form</h1>
+            <p>By filling out this form, you are indicating that you want to be a beta tester for the Engravinator. If
+                you are chosen for our beta tester program, you will be sent an invoice for $375 plus shipping cost and
+                we will send
+                you a ready-to-assemble kit. You will be expected to assemble the kit yourself following the
+                instructions on our site and provide feedback on the documentation and your experience with the device.
+            </p>
+            <p>If you are local to Raleigh, NC a member of the Engravinator team can arrange to deliver your kit to you
+                without shipping cost. If you are outside of the RTP area, we will need to ship the Engravinator to you
+                for an additional fee. Due to various concerns around exporting laser units from outside the United
+                States, we are only accepting beta testers located in the continental US only.</p>
+            <p>You are more than welcome to share your experience and build process with anyone (including social
+                media), but we ask that you please do not sell or give away your Engravinator until we have gotten all
+                the feedback from you we need.
+            </p>
+            <div class="indicates-required text-right"><span class="asterisk">*</span> indicates required</div>
+            <form name="beta-tester">
+                <div class="grid-container">
+                    <div class="grid-x grid-padding-x">
+                        <div class="medium-12 cell">
+                            <label>First Name <span class="asterisk">*</span>
+                                <input type="text" placeholder="First Name" name="firstname">
+                            </label>
+                        </div>
+                        <div class="medium-12 cell">
+                            <label>Last Name <span class="asterisk">*</span>
+                                <input type="text" placeholder="Last Name" name="lastname">
+                            </label>
+                        </div>
+                        <div class="medium-12 cell">
+                            <label>Email <span class="asterisk">*</span>
+                                <input type="text" placeholder="user@example.com" name="email">
+                            </label>
+                        </div>
+                        <div class="medium-6 cell">
+                            <label>Hardware Assembly Experience <span class="asterisk">*</span>
+                                <select name="hardware">
+                                    <option value="newbie">Newbie</option>
+                                    <option value="moderate">Moderate</option>
+                                    <option value="expert">Expert</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="medium-6 cell">
+                            <label>Laser Engraving Experience <span class="asterisk">*</span>
+                                <select name="laser">
+                                    <option value="newbie">Newbie</option>
+                                    <option value="moderate">Moderate</option>
+                                    <option value="expert">Expert</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="medium-12 cell" id="address_wrapper">
+                            <label>Street Address
+                                <input type="text" placeholder="123 Fake St; Exampleton, NC 12345" name="address">
+                            </label>
+                        </div>
+                        <div class="medium-12 cell">
+                            <input type="checkbox" name="shipping"><label for="shipping">Shipping required</label>
+                        </div>
+                        <div class="medium-12 cell text-right">
+                            <input type="submit" class="button" value="Submit">
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    const scriptURL = "{{ site.beta_url }}";
+    const form = document.forms['beta-tester'];
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+    });
+</script>
+{% endblock %}

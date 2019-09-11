@@ -48,11 +48,13 @@ var clean_params = {
 };
 
 var DEVEL = process.env.DEVEL ? true : false;
+var BETA_URL = process.env.BETA_URL ? process.env.BETA_URL : '';
 
 var site = {
     title: 'Engravinator',
     url: DEVEL ? 'http://localhost:9000' : 'https://engravinator.com',
-    time: new Date()
+    time: new Date(),
+    beta_url: BETA_URL
 };
 
 if (!process.env.URL_ROOT) {
