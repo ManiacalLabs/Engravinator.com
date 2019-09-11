@@ -20,10 +20,20 @@
                 media), but we ask that you please do not sell or give away your Engravinator until we have gotten all
                 the feedback from you we need.
             </p>
-            <div class="indicates-required text-right"><span class="asterisk">*</span> indicates required</div>
+            <div class="callout small primary hide" id="submitting">
+                Submitting your response
+            </div>
+            <div class="callout small success hide" id="success">
+                Thank you for your interest. We'll be in touch soon
+            </div>
+            <div class="callout small alert hide" id="error">
+                Something went wrong with the form. Please try again.
+            </div>
             <form name="beta-tester">
+                <div class="indicates-required text-right"><span class="asterisk">*</span> indicates required</div>
                 <div class="grid-container">
                     <div class="grid-x grid-padding-x">
+
                         <div class="medium-12 cell">
                             <label>First Name <span class="asterisk">*</span>
                                 <input type="text" placeholder="First Name" name="firstname">
@@ -80,11 +90,27 @@
     const scriptURL = "{{ site.beta_url }}";
     const form = document.forms['beta-tester'];
 
-    form.addEventListener('submit', e => {
-        e.preventDefault()
+    form.addEventListener('submit', function (e) {
+        jQuery('[name="beta-tester"]').addClass('hide');
+        jQuery('#submitting').removeClass('hide');
+        
+        e.preventDefault();
         fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-            .then(response => console.log('Success!', response))
-            .catch(error => console.error('Error!', error.message))
+            .then(function (response) {
+                jQuery('#submitting').addClass('hide');
+
+                if (response.status === 200) {
+                    jQuery('#success').removeClass('hide');
+                } else {
+                    console.error(response);
+                    jQuery('#error').removeClass('hide');
+                }
+            })
+            .catch(function (error) {
+                jQuery('#submitting').addClass('hide');
+                jQuery('#error').removeClass('hide');
+                console.error('Error!', error.message);
+            });
     });
 </script>
 {% endblock %}
