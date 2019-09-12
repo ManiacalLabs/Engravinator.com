@@ -4,7 +4,8 @@
 		"section_order": [
 			"hardware",
 			"motion",
-			"electronics"
+			"electronics",
+			"enclosure"
 		],
 		"hardware": {
 			"section_title": "Hardware Components",
@@ -20,38 +21,42 @@
 				{
 					"name": "Stepper Motor",
 					"quantity": 2,
-					"order_number": "17HS13-1334S",
+					"part_number": "17HS13-1334S",
 					"url": "https://www.omc-stepperonline.com/nema-17-bipolar-18deg-22ncm-31ozin-133a-28v-42x42x34mm-4-wires-17hs13-1334s.html",
 					"price": 8.66
 				},
 				{
 					"name": "Control Board",
 					"quantity": 1,
-					"order_number": "Platypus",
+					"part_number": "Platypus",
 					"price": 25
 				},
 				{
 					"name": "10A @ 12V Power Supply",
 					"quantity": 1,
-					"order_number": "Amazon",
+					"part_number": "Amazon",
 					"url": "https://www.amazon.com/gp/product/B00LWQ2GS0",
 					"price": 17.88
 				},
 				{
 					"name": "Limit Switch",
 					"quantity": 2,
-					"order_number": "D2F-01FL3-D3",
+					"part_number": "D2F-01FL3-D3",
 					"url": "https://www.digikey.com/product-detail/en/omron-electronics-inc-emc-div/D2F-01FL3-D3/Z4674-ND/4947669",
 					"price": 1
 				},
 				{
 					"name": "TMC2100 STEPSTICK",
 					"quantity": 2,
-					"order_number": "1460-1159-ND",
+					"part_number": "1460-1159-ND",
 					"url": "https://www.digikey.com/product-detail/en/trinamic-motion-control-gmbh/TMC-SILENTSTEPSTICK/1460-1159-ND/5724190",
 					"price": 7.98
 				}
 			]
+		},
+		"enclosure": {
+			"section_title": "Enclosure Components",
+			"parts": []
 		}
 	}
 }
