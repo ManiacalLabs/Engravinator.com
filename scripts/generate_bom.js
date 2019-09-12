@@ -1,6 +1,7 @@
 var program = require('commander');
 var GoogleSpreadsheet = require('google-spreadsheet');
 var lo = require('lodash');
+var jsonfile = require('jsonfile');
 
 program
     .option('--output <filename>', 'The json file to overwrite')
@@ -61,7 +62,10 @@ function generateCategoryMap(parts) {
         qty: 'quantity',
         name: 'name',
         part_number: 'part_number',
-        x1_total: 'price'
+        price_per_unit: 'price_per_unit',
+        1: 'part_price',
+        x1_total: 'total_price',
+        minimum_qnty: 'minimum_quantity'
     };
     var category_map = {};
 
@@ -89,6 +93,29 @@ function generateCategoryMap(parts) {
 }
 
 /**
+ * Writes the products to the specified json file
+ * @param {Object} category_map The map of categories to products
+ * @return {undefined}
+ */
+function writeBOM(category_map) {
+    var currentData = jsonfile.readFileSync(program.output, { throws: false });
+
+    if (currentData === null) {
+        currentData = { bom: {} };
+    }
+
+    lo.each(category_map, function (parts, category) {
+        if (!lo.has(currentData.bom, category)) {
+            currentData.bom[category] = {};
+        }
+
+        currentData.bom[category].parts = parts;
+    });
+
+    jsonfile.writeFileSync(program.output, currentData);
+}
+
+/**
  * Processes the data in the sheet
  * @param {Object} error The error
  * @param {Object[]} cells The data
@@ -102,8 +129,7 @@ function processSheet(error, cells) {
 
     var parts = generatePartsList(cells);
     var category_map = generateCategoryMap(parts);
-
-    console.log(category_map['enclosure']);
+    writeBOM(category_map);
 }
 
 var doc = new GoogleSpreadsheet(program.docid);
