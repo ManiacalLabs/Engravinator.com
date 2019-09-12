@@ -9,54 +9,353 @@
 		],
 		"hardware": {
 			"section_title": "Hardware Components",
-			"parts": []
+			"parts": [
+				{
+					"part_price": 0.28,
+					"quantity": 4,
+					"name": "M2 x 8mm Screw",
+					"part_number": "CSH-ST-M2-8",
+					"price_per_unit": 0.28,
+					"total_price": 1.12,
+					"minimum_quantity": 1,
+					"url": "https://us.misumi-ec.com/vona2/detail/221000551286/?HissuCode=CSH-ST-M2-8&PNSearch=CSH-ST-M2-8&KWSearch=CSH-ST-M2-8&searchFlow=results2type"
+				},
+				{
+					"part_price": 0.18,
+					"quantity": 4,
+					"name": "M3 x 5mm Screw",
+					"part_number": "CSH-ST-M3-5",
+					"price_per_unit": 0.18,
+					"total_price": 0.72,
+					"minimum_quantity": 1,
+					"url": "https://us.misumi-ec.com/vona2/detail/221000551286/?HissuCode=CSH-ST-M3-5"
+				},
+				{
+					"part_price": 0.18,
+					"quantity": 4,
+					"name": "M3 x 10mm Screw",
+					"part_number": "CSH-ST-M3-10",
+					"price_per_unit": 0.18,
+					"total_price": 0.72,
+					"minimum_quantity": 1,
+					"url": "https://us.misumi-ec.com/vona2/detail/221000551286/?HissuCode=CSH-ST-M3-10&PNSearch=CSH-ST-M3-10&KWSearch=CSH-ST-M3-10&searchFlow=results2type"
+				},
+				{
+					"part_price": 0.19,
+					"quantity": 14,
+					"name": "M3 x 15mm Screw",
+					"part_number": "CSH-ST-M3-15",
+					"price_per_unit": 0.19,
+					"total_price": 2.66,
+					"minimum_quantity": 1,
+					"url": "https://us.misumi-ec.com/vona2/detail/221000551286/?HissuCode=CSH-ST-M3-15&PNSearch=CSH-ST-M3-15&KWSearch=CSH-ST-M3-15&searchFlow=results2type"
+				},
+				{
+					"part_price": 0.19,
+					"quantity": 23,
+					"name": "M3 x 20mm Screw",
+					"part_number": "CSH-ST-M3-20",
+					"price_per_unit": 0.19,
+					"total_price": 4.37,
+					"minimum_quantity": 1,
+					"url": "https://us.misumi-ec.com/vona2/detail/221000551286/?HissuCode=CSH-ST-M3-20&PNSearch=CSH-ST-M3-20&KWSearch=CSH-ST-M3-20&searchFlow=results2type"
+				},
+				{
+					"part_price": 0.2,
+					"quantity": 2,
+					"name": "M3 x 25mm Screw",
+					"part_number": "CSH-ST-M3-25",
+					"price_per_unit": 0.2,
+					"total_price": 0.4,
+					"minimum_quantity": 1,
+					"url": "https://us.misumi-ec.com/vona2/detail/221000551286/?HissuCode=CSH-ST-M3-25&PNSearch=CSH-ST-M3-25&KWSearch=CSH-ST-M3-25&searchFlow=results2type"
+				},
+				{
+					"part_price": 0.21,
+					"quantity": 2,
+					"name": "M3 x 30mm Screw",
+					"part_number": "CSH-ST-M3-30",
+					"price_per_unit": 0.21,
+					"total_price": 0.42,
+					"minimum_quantity": 1,
+					"url": "https://us.misumi-ec.com/vona2/detail/221000551286/?HissuCode=CSH-ST-M3-30&PNSearch=CSH-ST-M3-30&KWSearch=CSH-ST-M3-30&searchFlow=results2type"
+				},
+				{
+					"part_price": 0.0555,
+					"quantity": 33,
+					"name": "M3 Nut",
+					"part_number": "Market Price",
+					"price_per_unit": 5.55,
+					"total_price": 1.8315000000000001,
+					"minimum_quantity": 100,
+					"url": ""
+				},
+				{
+					"part_price": 0.26,
+					"quantity": 15,
+					"name": "M5 x 10mm Screw",
+					"part_number": "CB5-10",
+					"price_per_unit": 0.26,
+					"total_price": 3.9000000000000004,
+					"minimum_quantity": 1,
+					"url": "https://us.misumi-ec.com/vona2/detail/110100141750/?HissuCode=CB5-10&PNSearch=CB5-10&KWSearch=CB5-10&searchFlow=results2type"
+				},
+				{
+					"part_price": 2.03,
+					"quantity": 24,
+					"name": "2020 Bracket",
+					"part_number": "HBLFSN5-SEP",
+					"price_per_unit": 2.03,
+					"total_price": 48.72,
+					"minimum_quantity": 1,
+					"url": "https://us.misumi-ec.com/vona2/detail/110300437260/?HissuCode=HBLFSN5-SEP&PNSearch=HBLFSN5-SEP&KWSearch=HBLFSN5-SEP&searchFlow=results2type"
+				},
+				{
+					"part_price": 0.58,
+					"quantity": 15,
+					"name": "Post-Assembly Spring Nut",
+					"part_number": "HNTP5-5",
+					"price_per_unit": 0.58,
+					"total_price": 8.7,
+					"minimum_quantity": 1,
+					"url": "https://us.misumi-ec.com/vona2/detail/110302247640/?HissuCode=HNTP5-5&PNSearch=HNTP5-5&KWSearch=HNTP5-5&searchFlow=results2type"
+				},
+				{
+					"part_price": 2.5,
+					"quantity": 1,
+					"name": "2020 Slot Cover",
+					"part_number": "HSCL5-B",
+					"price_per_unit": 2.5,
+					"total_price": 2.5,
+					"minimum_quantity": 1,
+					"url": "https://us.misumi-ec.com/vona2/detail/110302695120/?HissuCode=HSCL5-B"
+				},
+				{
+					"part_price": 3.03,
+					"quantity": 4,
+					"name": "2020 Extrusion 200mm",
+					"part_number": "HFS5-2020-200",
+					"price_per_unit": 3.03,
+					"total_price": 12.12,
+					"minimum_quantity": 1,
+					"url": "https://us.misumi-ec.com/vona2/detail/110302683830/?HissuCode=HFS5-2020-200&PNSearch=HFS5-2020-200&KWSearch=HFS5-2020-200&searchFlow=results2type"
+				},
+				{
+					"part_price": 3.03,
+					"quantity": 4,
+					"name": "2020 Extrusion 210mm",
+					"part_number": "HFS5-2020-210",
+					"price_per_unit": 3.03,
+					"total_price": 12.12,
+					"minimum_quantity": 1,
+					"url": "https://us.misumi-ec.com/vona2/detail/110302683830/?HissuCode=HFS5-2020-210&PNSearch=HFS5-2020-210&KWSearch=HFS5-2020-210&searchFlow=results2type"
+				},
+				{
+					"part_price": 3.03,
+					"quantity": 4,
+					"name": "2020 Extrusion 240mm",
+					"part_number": "HFS5-2020-240",
+					"price_per_unit": 3.03,
+					"total_price": 12.12,
+					"minimum_quantity": 1,
+					"url": "https://us.misumi-ec.com/vona2/detail/110302683830/?HissuCode=HFS5-2020-240&PNSearch=HFS5-2020-240&KWSearch=HFS5-2020-240&searchFlow=results2type"
+				}
+			]
 		},
 		"motion": {
 			"section_title": "Motion Components",
-			"parts": []
+			"parts": [
+				{
+					"part_price": 9.5,
+					"quantity": 4,
+					"name": "Linear Rod",
+					"part_number": "PSFJ8-250",
+					"price_per_unit": 9.5,
+					"total_price": 38,
+					"minimum_quantity": 1,
+					"url": "https://us.misumi-ec.com/vona2/detail/110302634310/?HissuCode=PSFJ8-250"
+				},
+				{
+					"part_price": 5.85,
+					"quantity": 6,
+					"name": "Linear Bearing",
+					"part_number": "LMU8",
+					"price_per_unit": 5.85,
+					"total_price": 35.099999999999994,
+					"minimum_quantity": 1,
+					"url": "https://us.misumi-ec.com/vona2/detail/110300026540/?HissuCode=LMU8"
+				},
+				{
+					"part_price": 1.2,
+					"quantity": 1.2,
+					"name": "GT2-6mm Timing Belt",
+					"part_number": "eBay / AliExpress",
+					"price_per_unit": 1.2,
+					"total_price": 1.44,
+					"minimum_quantity": 1,
+					"url": ""
+				},
+				{
+					"part_price": 0.53,
+					"quantity": 2,
+					"name": "GT2-16 5mm Bore Pulley",
+					"part_number": "eBay / AliExpress",
+					"price_per_unit": 0.53,
+					"total_price": 1.06,
+					"minimum_quantity": 1,
+					"url": ""
+				},
+				{
+					"part_price": 0.5740000000000001,
+					"quantity": 2,
+					"name": "GT2-16 3mm Bore Pulley",
+					"part_number": "eBay / AliExpress",
+					"price_per_unit": 2.87,
+					"total_price": 1.1480000000000001,
+					"minimum_quantity": 5,
+					"url": ""
+				}
+			]
 		},
 		"electronics": {
 			"section_title": "Electronics Components",
 			"parts": [
 				{
+					"part_price": 8.66,
+					"quantity": 2,
 					"name": "Stepper Motor",
-					"quantity": 2,
 					"part_number": "17HS13-1334S",
-					"url": "https://www.omc-stepperonline.com/nema-17-bipolar-18deg-22ncm-31ozin-133a-28v-42x42x34mm-4-wires-17hs13-1334s.html",
-					"price": 8.66
+					"price_per_unit": 8.66,
+					"total_price": 17.32,
+					"minimum_quantity": 1,
+					"url": "https://www.omc-stepperonline.com/nema-17-bipolar-18deg-22ncm-31ozin-133a-28v-42x42x34mm-4-wires-17hs13-1334s.html"
 				},
 				{
+					"part_price": 25,
+					"quantity": 1,
 					"name": "Control Board",
-					"quantity": 1,
-					"part_number": "Platypus",
-					"price": 25
+					"part_number": "???",
+					"price_per_unit": 25,
+					"total_price": 25,
+					"minimum_quantity": 1,
+					"url": ""
 				},
 				{
+					"part_price": 17.88,
+					"quantity": 1,
 					"name": "10A @ 12V Power Supply",
-					"quantity": 1,
 					"part_number": "Amazon",
-					"url": "https://www.amazon.com/gp/product/B00LWQ2GS0",
-					"price": 17.88
+					"price_per_unit": 17.88,
+					"total_price": 17.88,
+					"minimum_quantity": 1,
+					"url": "https://www.amazon.com/gp/product/B00LWQ2GS0/"
 				},
 				{
+					"part_price": 1,
+					"quantity": 2,
 					"name": "Limit Switch",
-					"quantity": 2,
 					"part_number": "D2F-01FL3-D3",
-					"url": "https://www.digikey.com/product-detail/en/omron-electronics-inc-emc-div/D2F-01FL3-D3/Z4674-ND/4947669",
-					"price": 1
+					"price_per_unit": 1,
+					"total_price": 2,
+					"minimum_quantity": 1,
+					"url": "https://www.digikey.com/product-detail/en/omron-electronics-inc-emc-div/D2F-01FL3-D3/Z4674-ND/4947669"
 				},
 				{
-					"name": "TMC2100 STEPSTICK",
+					"part_price": 7.98,
 					"quantity": 2,
+					"name": "TMC2100 STEPSTICK",
 					"part_number": "1460-1159-ND",
-					"url": "https://www.digikey.com/product-detail/en/trinamic-motion-control-gmbh/TMC-SILENTSTEPSTICK/1460-1159-ND/5724190",
-					"price": 7.98
+					"price_per_unit": 7.98,
+					"total_price": 15.96,
+					"minimum_quantity": 1,
+					"url": "https://www.digikey.com/product-detail/en/trinamic-motion-control-gmbh/TMC-SILENTSTEPSTICK/1460-1159-ND/5724190"
 				}
 			]
 		},
 		"enclosure": {
 			"section_title": "Enclosure Components",
-			"parts": []
+			"parts": [
+				{
+					"part_price": 0.18,
+					"quantity": 20,
+					"name": "M3 x 10mm Screw",
+					"part_number": "CSH-ST-M3-10",
+					"price_per_unit": 0.18,
+					"total_price": 3.5999999999999996,
+					"minimum_quantity": 1,
+					"url": "https://us.misumi-ec.com/vona2/detail/221000551286/?HissuCode=CSH-ST-M3-10&PNSearch=CSH-ST-M3-10&KWSearch=CSH-ST-M3-10&searchFlow=results2type"
+				},
+				{
+					"part_price": 0.19,
+					"quantity": 4,
+					"name": "M3 x 15mm Screw",
+					"part_number": "CSH-ST-M3-15",
+					"price_per_unit": 0.19,
+					"total_price": 0.76,
+					"minimum_quantity": 1,
+					"url": "https://us.misumi-ec.com/vona2/detail/221000551286/?HissuCode=CSH-ST-M3-15&PNSearch=CSH-ST-M3-15&KWSearch=CSH-ST-M3-15&searchFlow=results2type"
+				},
+				{
+					"part_price": 0.21,
+					"quantity": 4,
+					"name": "M3 x 30mm Screw",
+					"part_number": "CSH-ST-M3-30",
+					"price_per_unit": 0.21,
+					"total_price": 0.84,
+					"minimum_quantity": 1,
+					"url": "https://us.misumi-ec.com/vona2/detail/221000551286/?HissuCode=CSH-ST-M3-30&PNSearch=CSH-ST-M3-30&KWSearch=CSH-ST-M3-30&searchFlow=results2type"
+				},
+				{
+					"part_price": 0.0555,
+					"quantity": 28,
+					"name": "M3 Nut",
+					"part_number": "Market Price",
+					"price_per_unit": 5.55,
+					"total_price": 1.554,
+					"minimum_quantity": 100,
+					"url": ""
+				},
+				{
+					"part_price": 0.26,
+					"quantity": 9,
+					"name": "M5 x 8mm Screw",
+					"part_number": "CB5-8",
+					"price_per_unit": 0.26,
+					"total_price": 2.34,
+					"minimum_quantity": 1,
+					"url": "https://us.misumi-ec.com/vona2/detail/110100141750/?HissuCode=CB5-8&PNSearch=CB5-8&KWSearch=CB5-8&searchFlow=results2type"
+				},
+				{
+					"part_price": 0.26,
+					"quantity": 12,
+					"name": "M5 x 10mm Screw",
+					"part_number": "CB5-10",
+					"price_per_unit": 0.26,
+					"total_price": 3.12,
+					"minimum_quantity": 1,
+					"url": "https://us.misumi-ec.com/vona2/detail/110100141750/?HissuCode=CB5-10&PNSearch=CB5-10&KWSearch=CB5-10&searchFlow=results2type"
+				},
+				{
+					"part_price": 0.58,
+					"quantity": 21,
+					"name": "Post-Assembly Spring Nut",
+					"part_number": "HNTP5-5",
+					"price_per_unit": 0.58,
+					"total_price": 12.18,
+					"minimum_quantity": 1,
+					"url": "https://us.misumi-ec.com/vona2/detail/110302247640/?HissuCode=HNTP5-5&PNSearch=HNTP5-5&KWSearch=HNTP5-5&searchFlow=results2type"
+				},
+				{
+					"part_price": 15,
+					"quantity": 1,
+					"name": "2422 Orange",
+					"part_number": "Piedmont Plastic",
+					"price_per_unit": 15,
+					"total_price": 15,
+					"minimum_quantity": 1,
+					"url": ""
+				}
+			]
 		}
 	}
 }

@@ -2,6 +2,7 @@ var program = require('commander');
 var GoogleSpreadsheet = require('google-spreadsheet');
 var lo = require('lodash');
 var jsonfile = require('jsonfile');
+var fs = require('fs');
 
 program
     .option('--output <filename>', 'The json file to overwrite')
@@ -65,7 +66,8 @@ function generateCategoryMap(parts) {
         price_per_unit: 'price_per_unit',
         1: 'part_price',
         x1_total: 'total_price',
-        minimum_qnty: 'minimum_quantity'
+        minimum_qnty: 'minimum_quantity',
+        url: 'url'
     };
     var category_map = {};
 
@@ -112,7 +114,7 @@ function writeBOM(category_map) {
         currentData.bom[category].parts = parts;
     });
 
-    jsonfile.writeFileSync(program.output, currentData);
+    fs.writeFileSync(program.output, JSON.stringify(currentData, null, '\t'));
 }
 
 /**
