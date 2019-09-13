@@ -67,6 +67,7 @@ function generateCategoryMap(parts) {
         1: 'part_price',
         x1_total: 'total_price',
         minimum_qnty: 'minimum_quantity',
+        note: 'note',
         url: 'url'
     };
     var category_map = {};
@@ -105,6 +106,8 @@ function writeBOM(category_map) {
     if (currentData === null) {
         currentData = { bom: {} };
     }
+
+    currentData.generated_at = Date.now();
 
     lo.each(category_map, function (parts, category) {
         if (!lo.has(currentData.bom, category)) {

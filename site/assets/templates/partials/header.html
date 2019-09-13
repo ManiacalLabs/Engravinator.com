@@ -6,15 +6,23 @@
 <link rel="stylesheet" href="{{ helpers.getAbsolutePath(site, 'css/foundation.min.css') }}" />
 <link rel="stylesheet" href="{{ helpers.getAbsolutePath(site, 'css/base.css') }}" />
 
+{% for style in data.include_styles %}
+<link rel="stylesheet" href="{{ helpers.getAbsolutePath(site, 'css/' + style + '.css') }}" />
+{% endfor %}
+
 <link rel="shortcut icon" href="{{ helpers.getAbsolutePath(site, 'images/logos/logo_square_32.png') }}" />
 
 <meta property="og:url" content="{{ helpers.getUrl(site) }}" />
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Engravinator - The open source engraver" />
 <meta property="og:description" content="The Engravinator is an open source laser engraver for DIY enthusiasts." />
-<meta property="og:image" content="{{ helpers.getUrl(site, helpers.getAbsolutePath(site, 'images/social/opengraph.png')) }}" />
+<meta property="og:image"
+    content="{{ helpers.getUrl(site, helpers.getAbsolutePath(site, 'images/social/opengraph.png')) }}" />
 <meta property="fb:app_id" content="901482400223319" />
 
 {% include "partials/header_google.html" %}
-{% include "partials/header_mailchimp.html" %}
+
+{% for header in data.include_header %}
+{% include "partials/header_" + header + ".html" %}
+{% endfor %}
 {%- endmacro %}

@@ -25,6 +25,10 @@ var PATHS = {
         SRC: SITE + '/assets/images/**',
         DEST: DIST + '/images'
     },
+    FONTS: {
+        SRC: SITE + '/assets/fonts/**',
+        DEST: DIST + '/fonts'
+    },
     PAGES: {
         SRC: SITE + '/content/**/*.html',
         DATA: SITE + '/content/**/*.json',
@@ -97,6 +101,14 @@ function cleanimages() {
 }
 
 /**
+ * Clean all the fonts
+ * @returns {Object} The task stream
+ */
+function cleanfonts() {
+    return cleandir(PATHS.FONTS.DEST);
+}
+
+/**
  * Clean all the pages
  * @returns {Object} The task stream
  */
@@ -159,6 +171,15 @@ function images() {
 }
 
 /**
+ * Copies all the fonts
+ * @returns {Object} The task stream
+ */
+function fonts() {
+    return gulp.src(PATHS.FONTS.SRC)
+        .pipe(gulp.dest(PATHS.FONTS.DEST));
+}
+
+/**
  * Loads the JSON data
  * @param {String} file The filename
  * @returns {String} The json data
@@ -210,6 +231,7 @@ function pages() {
 function watch() {
     gulp.watch(PATHS.CSS.SRC, styles);
     gulp.watch(PATHS.IMAGES.SRC, images);
+    gulp.watch(PATHS.FONTS.SRC, fonts);
     gulp.watch([ PATHS.TEMPLATES.SRC, PATHS.PAGES.SRC, PATHS.PAGES.DATA ], pages);
 
     connect.server({
@@ -237,8 +259,8 @@ function ghpages() {
         .pipe(deploy());
 }
 
-var cleanall = gulp.parallel(cleanpages, cleanimages, cleanscripts, cleanstyles);
-var assets = gulp.series(bowerscripts, styles, images, pages);
+var cleanall = gulp.parallel(cleanpages, cleanimages, cleanfonts, cleanscripts, cleanstyles);
+var assets = gulp.series(bowerscripts, styles, images, fonts, pages);
 var default_task = gulp.series(cleanall, assets);
 
 exports.default = default_task;

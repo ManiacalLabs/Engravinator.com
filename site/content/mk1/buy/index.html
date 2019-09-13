@@ -1,20 +1,46 @@
 {% extends "base.html" %}
 {% import "partials/helpers.html" as helpers %}
 
+{% macro part_number(part) -%}
+{% if part.url %}
+<a href="{{ part.url }}">{{ part.part_number }}</a>
+{% else %}
+{{ part.part_number }}
+{% endif %}
+{%- endmacro %}
+
+{% macro part_note(part) -%}
+{% if part.note %}
+<span data-tooltip class="right" tabindex="2" title="{{ part.note }}">
+    <i class="material-icons">info</i>
+</span>
+{% endif %}
+{%- endmacro %}
+
 {% block content %}
 <div class="grid-container">
     <div class="grid-x grid-margin-x">
         <div class="cell text-center">
             <h1>Engravinator MK1 &mdash; Buy</h1>
         </div>
+        <div class="cell margin-medium-bottom">
+            <p>In order to build an Engravinator follow this bill of materials. The
+                parts listed here are optimized for building a single unit.
+            </p>
+            <p>When an item is listed as "Marked Price" or "eBay / AliExpress" you will either need to source this part
+                locally or find it yourself. This is typically because these parts are not properly priced on a
+                permanent site or require too large an order for a single unit.</p>
+        </div>
+        {% for section_name in data.bom.section_order %}
+        <div class="cell margin-medium-bottom">
 
-        <div class="cell">
-            {% for section_name in data.bom.section_order %}
             {% set section=data.bom[section_name] %}
-            <h2>{{ section.section_title }}</h2>
+            {% set section_total = 0 %}
+            <h2 class="h3">{{ section.section_title }}</h2>
+            <p class="margin-medium-bottom">{{ section.section_desc | safe }}</p>
             <table>
                 <thead>
-                    <th>Part Name</th>
+                    <th colspan="2">Part Name</th>
                     <th>Part Number</th>
                     <th class="text-center">Quantity</th>
                     <th class="text-center">Unit Price</th>
@@ -22,22 +48,24 @@
                 </thead>
                 <tbody>
                     {% for part in section.parts %}
+                    {% set section_total = section_total + (part.quantity * part.part_price) %}
                     <tr>
+                        <td class="info-col">{{ part_note(part) }}</td>
                         <td>{{ part.name }}</td>
-                        {% if part.url %}
-                        <td><a href="{{ part.url }}">{{ part.part_number }}</a></td>
-                        {% else %}
-                        <td>{{ part.part_number }}</td>
-                        {% endif %}
+                        <td>{{ part_number(part) }}</td>
                         <td class="text-center">{{ part.quantity }}</td>
                         <td class="text-center">{{ part.part_price | numeral("$0,0.00") }}</td>
                         <td class="text-center">{{ (part.quantity * part.part_price) | numeral("$0,0.00") }}</td>
                     </tr>
                     {% endfor %}
+                    <tr class="total">
+                        <td colspan="5"></td>
+                        <td class="text-center">{{ section_total | numeral("$0,0.00") }}</td>
+                    </tr>
                 </tbody>
             </table>
-            {% endfor %}
         </div>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}
