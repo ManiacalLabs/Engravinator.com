@@ -12,9 +12,12 @@
                 you a ready-to-assemble kit. You will be expected to assemble the kit yourself following the
                 instructions on our site and provide feedback on the documentation and your experience with the device.
             </p>
+            <p>If you have a 3d printer and are willing to print the parts yourself, we will reduce the price by $35. By
+                choosing "Print at home" below, you agree to be sent an incomplete kit with the expectation that you
+                will print (or have printed) the remaining required parts.</p>
             <p>If you are local to Raleigh, NC a member of the Engravinator team can arrange to deliver your kit to you
                 without shipping cost. If you are outside of the RTP area, we will need to ship the Engravinator to you
-                for an additional fee. Due to various concerns around exporting laser units from outside the United
+                for an additional fee. Due to various concerns around exporting laser units to outside the United
                 States, we are only accepting beta testers located in the continental US only.</p>
             <p>You are more than welcome to share your experience and build process with anyone (including social
                 media), but we ask that you please do not sell or give away your Engravinator until we have gotten all
@@ -67,13 +70,16 @@
                                 </select>
                             </label>
                         </div>
+                        <div class="medium-6 cell">
+                            <input type="checkbox" name="printathome"><label for="printathome">Print at home</label>
+                        </div>
+                        <div class="medium-6 cell">
+                            <input type="checkbox" name="shipping"><label for="shipping">Shipping required</label>
+                        </div>
                         <div class="medium-12 cell" id="address_wrapper">
                             <label>Street Address
                                 <input type="text" placeholder="123 Fake St; Exampleton, NC 12345" name="address">
                             </label>
-                        </div>
-                        <div class="medium-12 cell">
-                            <input type="checkbox" name="shipping"><label for="shipping">Shipping required</label>
                         </div>
                         <div class="medium-12 cell text-right">
                             <input type="submit" class="button" value="Submit">
@@ -93,7 +99,7 @@
     form.addEventListener('submit', function (e) {
         jQuery('[name="beta-tester"]').addClass('hide');
         jQuery('#submitting').removeClass('hide');
-        
+
         e.preventDefault();
         fetch(scriptURL, { method: 'POST', body: new FormData(form) })
             .then(function (response) {
