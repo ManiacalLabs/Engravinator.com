@@ -90,3 +90,7 @@ footer {
 .margin-medium-bottom {
     margin-bottom: 40px;
 }
+
+.thumbnail {
+    width: 100% !important;
+}

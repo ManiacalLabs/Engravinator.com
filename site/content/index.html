@@ -23,18 +23,31 @@
     </div>
     <br />
     <br />
-    <div class="grid-x grid-margin-x margin-medium-bottom">
-        <div class="cell medium-6">
-            {{ helpers.image(site, 'front.png') }}
+    <div class="grid-x grid-margin-x">
+        <div class="cell medium-6 margin-medium-bottom">
+            <h2 class="text-center"><a href="{{ helpers.getUrl(site, '/mk1') }}">Engravinator Mk1</a></h2>
+            <div class="large reveal" id="{{ data.front_image.id }}" data-reveal data-v-offset="10px">
+                {{ helpers.image(site, data.front_image.full) }}
+                <button class="close-button" data-close aria-label="Close reveal" type="button">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <a href="#" data-open="{{ data.front_image.id }}">{{ helpers.image(site, data.front_image.thumbnail) }}</a>
             <div class="grid-x grid-margin-x">
                 {% for image in data.images %}
+                <div class="large reveal" id="{{ image.id }}" data-reveal data-v-offset="10px">
+                    {{ helpers.image(site, image.full) }}
+                    <button class="close-button" data-close aria-label="Close reveal" type="button">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
                 <div class="cell small-4">
-                    {{ helpers.image(site, image) }}
+                    <a href="#" data-open="{{ image.id }}">{{ helpers.image(site, image.thumbnail) }}</a>
                 </div>
                 {% endfor %}
             </div>
         </div>
-        <div class="cell medium-6">
+        <div class="cell medium-6 margin-medium-bottom">
             {% include "partials/signup.html" %}
         </div>
     </div>

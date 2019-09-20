@@ -2,9 +2,26 @@
     "include_header": [
         "mailchimp"
     ],
+    "front_image": {
+        "id": "front",
+        "thumbnail": "front_thumbnail.png",
+        "full": "front.jpg"
+    },
     "images": [
-        "side1.png",
-        "side2.png",
-        "side3.png"
+        {
+            "id": "side-1",
+            "thumbnail": "side1_thumbnail.png",
+            "full": "side1.jpg"
+        },
+        {
+            "id": "side-2",
+            "thumbnail": "side2_thumbnail.png",
+            "full": "side2.jpg"
+        },
+        {
+            "id": "side-3",
+            "thumbnail": "side3_thumbnail.png",
+            "full": "side3.jpg"
+        }
     ]
 }

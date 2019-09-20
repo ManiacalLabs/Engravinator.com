@@ -29,7 +29,7 @@
             "title": "Customizable",
             "image": "mk1/attachments.png",
             "image_alt": "Optional attachments",
-            "copy": "With the Engravinator's Open Source design and a community of makers behind it, the Engravinator is super customizable.  From frame clamps to a custom real-time controller anything's possible."
+            "copy": "With the Engravinator's Open Source design and a community of makers behind it, the Engravinator is super customizable.  From frame clamps to a pen plotter to a custom real-time controller, anything's possible."
         }
     ],
     "build_steps": [
@@ -70,7 +70,7 @@
         "alt": [
             {
                 "src": "mk1/hero_tall.png",
-                "maxwidth": "400px"
+                "maxwidth": "40em"
             }
         ],
         "default": "mk1/hero_wide.png"
