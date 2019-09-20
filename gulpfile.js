@@ -44,7 +44,10 @@ var BOWER_SCRIPTS = [
     'bower_components/foundation-sites/dist/js/foundation.min.js'
 ];
 
-var BOWER_STYLES = [ 'bower_components/foundation-sites/dist/css/foundation.min.css' ];
+var BOWER_STYLES = [
+    'bower_components/foundation-sites/dist/css/foundation.min.css',
+    'bower_components/foundation-sites/dist/css/foundation.min.css.map'
+];
 
 var clean_params = {
     read: false,
@@ -167,7 +170,8 @@ var styles = gulp.parallel(customstyles, bowerstyles);
  */
 function images() {
     return gulp.src(PATHS.IMAGES.SRC)
-        .pipe(gulp.dest(PATHS.IMAGES.DEST));
+        .pipe(gulp.dest(PATHS.IMAGES.DEST))
+        .pipe(connect.reload());
 }
 
 /**

@@ -1,12 +1,23 @@
 {% extends "base.html" %}
 {% import "partials/helpers.html" as helpers %}
 
+{% set hero_images = {
+    'alt': [
+        {
+            'src': 'mk1/hero_tall.png',
+            'maxwidth': '400px'
+        }
+    ],
+    'default': 'mk1/hero_wide.png'
+}%}
+
 {% block content %}
 <div class="grid-container">
     <div class="grid-x grid-margin-x">
         <div class="cell text-center">
-            <h1>Engravinator MK1</h1>
-            <img src="https://via.placeholder.com/800x300" />
+            <h1 class="show-for-sr">Engravinator MK1</h1>
+            {{ helpers.picture(site, hero_images) }}
+
         </div>
 
         <div class="cell margin-medium-vertical">
@@ -15,13 +26,14 @@
                 {% for feature in data.highlighted_features %}
                 <div class="cell medium-4">
                     <h2 class="h3">{{ feature.title }}</h2>
-                    <img class="thumbnail" src="{{ feature.image }}" />
+                    {{ helpers.image(site, feature.image, 'thumbnail') }}
                     <p>{{ feature.copy | safe }}</p>
                 </div>
                 {% endfor %}
             </div>
         </div>
 
+        <!--  Coming Soon
         <div class="cell margin-medium-bottom">
             <h1 class="text-center">Assemble Your Own</h1>
             <div class="grid-x grid-margin-x grid-margin-y">
@@ -44,6 +56,7 @@
                 {% endfor %}
             </div>
         </div>
+        -->
 
         <div class="cell margin-medium-bottom">
             <h1 class="text-center">Features</h1>

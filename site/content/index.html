@@ -1,12 +1,6 @@
 {% extends "base.html" %}
 {% import "partials/helpers.html" as helpers %}
 
-{% set images = [
-    'render_side1.png',
-    'render_side2.png',
-    'render_side3.png'
-]%}
-
 {% block content %}
 <div class="grid-container">
     <div class="grid-x grid-margin-x">
@@ -22,20 +16,20 @@
                 Engravinator to be an engraver that you bring to your work piece. For example, if you are building a
                 large piece of furniture, you would clamp the Engravinator down to your work piece to engrave your
                 maker's mark.</p>
-            <p>Currently, we are in the design and prototyping phase of the project and will update this site, our <a
+            <p>Currently, we are in the testing phase of the project and will update this site, our <a
                     href="https://github.com/ManiacalLabs/Engravinator">GitHub repository</a> and our <a
                     href="https://twitter.com/TheEngravinator">Twitter account</a> with our progress.</p>
         </div>
     </div>
     <br />
     <br />
-    <div class="grid-x grid-margin-x">
+    <div class="grid-x grid-margin-x margin-medium-bottom">
         <div class="cell medium-6">
-            {{ helpers.image(site, 'render_final.png', class='thumbnail') }}
+            {{ helpers.image(site, 'front.png') }}
             <div class="grid-x grid-margin-x">
-                {% for image in images %}
+                {% for image in data.images %}
                 <div class="cell small-4">
-                    {{ helpers.image(site, image, class='thumbnail') }}
+                    {{ helpers.image(site, image) }}
                 </div>
                 {% endfor %}
             </div>

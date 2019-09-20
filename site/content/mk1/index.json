@@ -3,31 +3,31 @@
     "highlighted_features": [
         {
             "title": "Open Source",
-            "image": "https://via.placeholder.com/350x150",
+            "image": "mk1/oss.png",
             "image_alt": "open source logos",
             "copy": "It's in our DNA. The entire MK1 system is <a href=\"https://github.com/ManiacalLabs/Engravinator\">Open Source</a> and open for contributions and collaboration."
         },
         {
             "title": "Fast and Quiet",
-            "image": "https://via.placeholder.com/350x150",
+            "image": "mk1/bearings.png",
             "image_alt": "Bearing and motors",
-            "copy": "Something something quality bearings and motors make it go woosh."
+            "copy": "By using quality motion components, the Engravinator moves smoothly at up to 10,000 mm/min with 10 micron resolution."
         },
         {
             "title": "Sturdy",
-            "image": "https://via.placeholder.com/350x150",
+            "image": "mk1/frame.png",
             "image_alt": "Extruded aluminum",
             "copy": "Extruded 2020 aluminum extrusion frame make for a ridged platform that keeps the engraver square while reducing overall weight."
         },
         {
             "title": "Safe",
-            "image": "https://via.placeholder.com/350x150",
+            "image": "mk1/housing.png",
             "image_alt": "Fully enclosed housing",
             "copy": "The Engravinator's fully enclosed housing means that while the laser is running, your eyeballs are safe from harm."
         },
         {
             "title": "Customizable",
-            "image": "https://via.placeholder.com/350x150",
+            "image": "mk1/attachments.png",
             "image_alt": "Optional attachments",
             "copy": "With the Engravinator's Open Source design and a community of makers behind it, the Engravinator is super customizable.  From frame clamps to a custom real-time controller anything's possible."
         }
