@@ -65,5 +65,14 @@
         "8mm linear rods and bearings on both axis",
         "Rigid 2020 aluminum extrusion frame",
         "Full enclosure for maximum eye safety"
-    ]
+    ],
+    "hero_images": {
+        "alt": [
+            {
+                "src": "mk1/hero_tall.png",
+                "maxwidth": "400px"
+            }
+        ],
+        "default": "mk1/hero_wide.png"
+    }
 }

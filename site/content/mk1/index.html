@@ -1,22 +1,12 @@
 {% extends "base.html" %}
 {% import "partials/helpers.html" as helpers %}
 
-{% set hero_images = {
-    'alt': [
-        {
-            'src': 'mk1/hero_tall.png',
-            'maxwidth': '400px'
-        }
-    ],
-    'default': 'mk1/hero_wide.png'
-}%}
-
 {% block content %}
 <div class="grid-container">
     <div class="grid-x grid-margin-x">
         <div class="cell text-center">
             <h1 class="show-for-sr">Engravinator MK1</h1>
-            {{ helpers.picture(site, hero_images) }}
+            {{ helpers.picture(site, data.hero_images) }}
 
         </div>
 
