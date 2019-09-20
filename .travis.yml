@@ -13,6 +13,7 @@ before_script:
 - git config --global user.name "Travis-CI"
 cache: npm
 script:
+- cd node_modules/gulp-gh-pages && npm install --save gift@0.10.2 && cd ../../
 - npm run bower
 - npm run lint
 - npm run deploy
