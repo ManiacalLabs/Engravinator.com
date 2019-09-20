@@ -1,0 +1,10 @@
+{
+    "include_header": [
+        "mailchimp"
+    ],
+    "images": [
+        "side1.png",
+        "side2.png",
+        "side3.png"
+    ]
+}

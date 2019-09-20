@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     margin: 0px;
     padding: 0px;
     height: 100%;
@@ -11,8 +12,16 @@ html, body {
     background-color: #fff;
 }
 
-footer, #menu, #footer-who a, .title-bar, .menu-icon {
+footer,
+#menu,
+#footer-who a,
+.title-bar,
+.menu-icon {
     color: #b3b3b3;
+}
+
+#footer-who a {
+    font-size: 0.9em;
 }
 
 .title-bar-title {
@@ -38,11 +47,12 @@ footer {
     border-bottom-style: solid;
 }
 
-#menu, #menu ul {
+#menu,
+#menu ul {
     background-color: #000;
 }
 
-#menu ul li a {
+#menu ul li a, .title-bar-title a {
     color: #b3b3b3;
     font-weight: bold;
 }
@@ -70,4 +80,13 @@ footer {
 
 .indicates-required {
     font-size: .75em;
+}
+
+.margin-medium-vertical {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.margin-medium-bottom {
+    margin-bottom: 40px;
 }

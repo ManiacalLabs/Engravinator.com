@@ -1,0 +1,10 @@
+tr.total {
+    background-color: #fff !important;
+    border-width: 2px 0px 0px 0px !important;
+    border-color: #000 !important;
+    border-style: solid !important;
+}
+
+.info-col {
+    width: 24px;
+}

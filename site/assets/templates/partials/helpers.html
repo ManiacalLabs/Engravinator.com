@@ -6,6 +6,17 @@
 <img class="{{ class }}" src="{{ getAbsolutePath(site, 'images/' + url) }}">
 {%- endmacro %}
 
+{% macro picture(site, images) -%}
+<picture>
+
+{% for alt in images.alt %}
+    <source media="(max-width: {{ alt.maxwidth }})" srcset="{{ getAbsolutePath(site, 'images/' + alt.src) }}">
+{% endfor %}
+
+<img src="{{ getAbsolutePath(site, 'images/' + images.default) }}" >
+</picture>
+{%- endmacro %}
+
 {% macro getUrl(site, path) -%}
 {{ site.url }}{{ (path if path else site.path) | replace("index.html", "")}}
 {%- endmacro %}

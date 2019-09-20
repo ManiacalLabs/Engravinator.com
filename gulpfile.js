@@ -25,6 +25,10 @@ var PATHS = {
         SRC: SITE + '/assets/images/**',
         DEST: DIST + '/images'
     },
+    FONTS: {
+        SRC: SITE + '/assets/fonts/**',
+        DEST: DIST + '/fonts'
+    },
     PAGES: {
         SRC: SITE + '/content/**/*.html',
         DATA: SITE + '/content/**/*.json',
@@ -40,7 +44,10 @@ var BOWER_SCRIPTS = [
     'bower_components/foundation-sites/dist/js/foundation.min.js'
 ];
 
-var BOWER_STYLES = [ 'bower_components/foundation-sites/dist/css/foundation.min.css' ];
+var BOWER_STYLES = [
+    'bower_components/foundation-sites/dist/css/foundation.min.css',
+    'bower_components/foundation-sites/dist/css/foundation.min.css.map'
+];
 
 var clean_params = {
     read: false,
@@ -94,6 +101,14 @@ function cleanstyles() {
  */
 function cleanimages() {
     return cleandir(PATHS.IMAGES.DEST);
+}
+
+/**
+ * Clean all the fonts
+ * @returns {Object} The task stream
+ */
+function cleanfonts() {
+    return cleandir(PATHS.FONTS.DEST);
 }
 
 /**
@@ -155,7 +170,17 @@ var styles = gulp.parallel(customstyles, bowerstyles);
  */
 function images() {
     return gulp.src(PATHS.IMAGES.SRC)
-        .pipe(gulp.dest(PATHS.IMAGES.DEST));
+        .pipe(gulp.dest(PATHS.IMAGES.DEST))
+        .pipe(connect.reload());
+}
+
+/**
+ * Copies all the fonts
+ * @returns {Object} The task stream
+ */
+function fonts() {
+    return gulp.src(PATHS.FONTS.SRC)
+        .pipe(gulp.dest(PATHS.FONTS.DEST));
 }
 
 /**
@@ -210,6 +235,7 @@ function pages() {
 function watch() {
     gulp.watch(PATHS.CSS.SRC, styles);
     gulp.watch(PATHS.IMAGES.SRC, images);
+    gulp.watch(PATHS.FONTS.SRC, fonts);
     gulp.watch([ PATHS.TEMPLATES.SRC, PATHS.PAGES.SRC, PATHS.PAGES.DATA ], pages);
 
     connect.server({
@@ -237,8 +263,8 @@ function ghpages() {
         .pipe(deploy());
 }
 
-var cleanall = gulp.parallel(cleanpages, cleanimages, cleanscripts, cleanstyles);
-var assets = gulp.series(bowerscripts, styles, images, pages);
+var cleanall = gulp.parallel(cleanpages, cleanimages, cleanfonts, cleanscripts, cleanstyles);
+var assets = gulp.series(bowerscripts, styles, images, fonts, pages);
 var default_task = gulp.series(cleanall, assets);
 
 exports.default = default_task;
