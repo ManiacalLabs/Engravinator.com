@@ -45,6 +45,14 @@ In small quantities we've never found a specific supplier from which to purchase
 For the belts, you need two 600mm sections of GT2-6mm belt. Note that some places may list it as 2GT which is the same thing. It *must* be 6mm wide though!
 Also be sure to get standard fiber reinforced belts. **Do not** use steel reinforced belts! The pulley radius is too small and they could break.
 
+## Laser Module
+
+The Engravinator was designed to fit the commonly found Chinese PWM laser modules that use a 16x40mm M3 mounting pattern. Please note that you **must** use a PWM laser, not TTL! Those are two different things. We recommend looking for a module that includes the driver board on the module itself as there's not accommodations for mounting an external driver board.
+
+We've had exceptional experience with the modules from EleksMaker, especially the [EL01](http://store.eleksmaker.com/index.php?route=product/product&path=101&product_id=163) which can be had in 0.5W and 2.5W versions.
+
+Otherwise, we recommend looking on Amazon, eBay, or Aliexpress.
+
 ## Power Supply
 
 This is dependent on the controller you are using but we will assume you are using the [Maniacal Labs Platypus](https://maniacallabs.com/platypus) or similar. In which case, you will require a 12V switching AC/DC adapter with at least 6A output and a 2.1mm, center-positive, barrel connector.

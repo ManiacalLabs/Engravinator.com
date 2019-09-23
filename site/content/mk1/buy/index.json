@@ -239,14 +239,24 @@
 					"url": "https://www.omc-stepperonline.com/nema-17-bipolar-18deg-22ncm-31ozin-133a-28v-42x42x34mm-4-wires-17hs13-1334s.html"
 				},
 				{
-					"part_price": 25,
+					"part_price": 40,
 					"quantity": 1,
 					"name": "Control Board",
-					"part_number": "???",
-					"price_per_unit": 25,
+					"part_number": "Platypus",
+					"price_per_unit": 40,
 					"minimum_quantity": 1,
 					"note": "",
-					"url": ""
+					"url": "https://maniacallabs.com/platypus"
+				},
+				{
+					"part_price": 50,
+					"quantity": 1,
+					"name": "PWM Laser Module",
+					"part_number": "See BOM Guide",
+					"price_per_unit": 50,
+					"minimum_quantity": 1,
+					"note": "",
+					"url": "https://engravinator.com/mk1/BOM_Guide.html"
 				},
 				{
 					"part_price": 17.88,
@@ -413,5 +423,5 @@
 			]
 		}
 	},
-	"generated_at": 1569269716905
+	"generated_at": 1569274906605
 }
