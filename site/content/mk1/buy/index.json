@@ -22,7 +22,7 @@
 					"part_number": "CSH-ST-M2-8",
 					"price_per_unit": 0.28,
 					"minimum_quantity": 1,
-					"note": "This is a test note.\n\nLet's add whitespace!",
+					"note": "",
 					"url": "https://us.misumi-ec.com/vona2/detail/221000551286/?HissuCode=CSH-ST-M2-8&PNSearch=CSH-ST-M2-8&KWSearch=CSH-ST-M2-8&searchFlow=results2type"
 				},
 				{
@@ -89,11 +89,11 @@
 					"part_price": 0.0555,
 					"quantity": 33,
 					"name": "M3 Nut",
-					"part_number": "Market Price",
+					"part_number": "See BOM Guide",
 					"price_per_unit": 5.55,
 					"minimum_quantity": 100,
 					"note": "",
-					"url": ""
+					"url": "https://engravinator.com/mk1/BOM_Guide.html"
 				},
 				{
 					"part_price": 0.26,
@@ -194,32 +194,32 @@
 				{
 					"part_price": 1.2,
 					"quantity": 1.2,
-					"name": "GT2-6mm Timing Belt",
-					"part_number": "eBay / AliExpress",
+					"name": "GT2-6mm Timing Belt (meters)",
+					"part_number": "See BOM Guide",
 					"price_per_unit": 1.2,
 					"minimum_quantity": 1,
 					"note": "",
-					"url": ""
+					"url": "https://engravinator.com/mk1/BOM_Guide.html"
 				},
 				{
 					"part_price": 0.53,
 					"quantity": 2,
 					"name": "GT2-16 5mm Bore Pulley",
-					"part_number": "eBay / AliExpress",
+					"part_number": "See BOM Guide",
 					"price_per_unit": 0.53,
 					"minimum_quantity": 1,
 					"note": "",
-					"url": ""
+					"url": "https://engravinator.com/mk1/BOM_Guide.html"
 				},
 				{
 					"part_price": 0.5740000000000001,
 					"quantity": 2,
 					"name": "GT2-16 3mm Bore Pulley",
-					"part_number": "eBay / AliExpress",
+					"part_number": "See BOM Guide",
 					"price_per_unit": 2.87,
 					"minimum_quantity": 5,
 					"note": "",
-					"url": ""
+					"url": "https://engravinator.com/mk1/BOM_Guide.html"
 				}
 			]
 		},
@@ -251,11 +251,11 @@
 					"part_price": 17.88,
 					"quantity": 1,
 					"name": "10A @ 12V Power Supply",
-					"part_number": "Amazon",
+					"part_number": "See BOM Guide",
 					"price_per_unit": 17.88,
 					"minimum_quantity": 1,
 					"note": "",
-					"url": "https://www.amazon.com/gp/product/B00LWQ2GS0/"
+					"url": "https://engravinator.com/mk1/BOM_Guide.html"
 				},
 				{
 					"part_price": 1,
@@ -270,12 +270,12 @@
 				{
 					"part_price": 7.98,
 					"quantity": 2,
-					"name": "TMC2100 STEPSTICK",
-					"part_number": "1460-1159-ND",
+					"name": "TMC2208 STEPSTICK",
+					"part_number": "1460-1201-ND",
 					"price_per_unit": 7.98,
 					"minimum_quantity": 1,
 					"note": "",
-					"url": "https://www.digikey.com/product-detail/en/trinamic-motion-control-gmbh/TMC-SILENTSTEPSTICK/1460-1159-ND/5724190"
+					"url": "https://www.digikey.com/product-detail/en/trinamic-motion-control-gmbh/TMC2208-SILENTSTEPSTICK/1460-1201-ND/6873626"
 				}
 			]
 		},
@@ -354,17 +354,17 @@
 					"url": "https://us.misumi-ec.com/vona2/detail/110302247640/?HissuCode=HNTP5-5&PNSearch=HNTP5-5&KWSearch=HNTP5-5&searchFlow=results2type"
 				},
 				{
-					"part_price": 15,
+					"part_price": 45,
 					"quantity": 1,
 					"name": "2422 Orange",
-					"part_number": "Piedmont Plastic",
-					"price_per_unit": 15,
+					"part_number": "See BOM Guide",
+					"price_per_unit": 45,
 					"minimum_quantity": 1,
 					"note": "",
-					"url": ""
+					"url": "https://engravinator.com/mk1/BOM_Guide.html"
 				}
 			]
 		}
 	},
-	"generated_at": 1568395666641
+	"generated_at": 1569196496115
 }
