@@ -1,5 +1,7 @@
 # BOM Buyer's Guide
 
+**Note:** If you purchased a full kit, you can ignore this entire document as it's been taken care of for you.
+
 We have tried to keep the Bill of Materials (BOM) as simple as possible with as few sources as possible. However, there are a number of things to keep in mind if you are sourcing all of your own components. **Before** ordering your components, please be sure to read this guide in full.
 
 ## Misumi vs McMaster-Carr
@@ -41,6 +43,7 @@ In small quantities we've never found a specific supplier from which to purchase
 - Idler: GT2-16 tooth, 3mm bore, 13mm OD, 6mm belt width
 
 For the belts, you need two 600mm sections of GT2-6mm belt. Note that some places may list it as 2GT which is the same thing. It *must* be 6mm wide though!
+Also be sure to get standard fiber reinforced belts. **Do not** use steel reinforced belts! The pulley radius is too small and they could break.
 
 ## Power Supply
 
@@ -58,11 +61,28 @@ The [Maniacal Labs Platypus](https://maniacallabs.com/platypus) controller was d
 
 For stepper drivers, if your controller of course does not have them built in, we highly recommend the TMC2208 SilentStepStick, as listed in the BOM. Any StepStick / Pololu style driver that supports at least 1/16 microstepping should work though.
 
+## Wiring
+
+You will, at least, need hookup wire for the limit switches. We recommend using 20-24 gauge stranded wire and, if possible, wire that comes with and outer sheath, containing both wires. We recommend either speaker wire or "alarm" wire.
+
+Most likely the laser module you purchase will include an appropriate cable and you can use that. If it does not, we recommend the same type of wire mentioned above, but 20 gauge with 3-4 conductors instead of 2.
+
+We also recommend ~2mm heat shrink tubing for properly insulating the limit switch connections.
+
 ## Aluminum Extrusions
 
 You might be tempted to just buy a long length of 2020 extrusion and cut your own pieces. **Resist this temptation!!**
 
 The Engravinator is designed with tight tolerances and the aluminum extrusion creates the foundation of the entire machine. Which must be perfectly square and of exact size. All the extrusions from Misumi, cut to within 0.5mm of the required length, are only $36 for the set and well worth the cost.
+
+## Miscellaneous
+
+While the zip ties are absolutely required, the rest of the items listed here are merely recommended. Everything below can easily be found online or in your local hardware store.
+
+- **Zip Ties:** Strain relief is handled in many places via the use of small zip ties. The size you need have roughly a 2.5mm x 1mm cross section and be at least 100mm long. This is typically the smallest size you will see for sale.
+- **Silicone/Rubber Feet:** These depend on how you will be using your Engravinator but we recommend 25mm x 25mm square, self-stick, silicone rubber feet. It will help keep the machine in place while engraving.
+- **Heat shrink tubing:** When soldering the wires to each of the limit switches, we highly recommend using short lengths of 3mm diameter heat shrink tubing to insulate the solder joints. Plus it just looks nicer :)
+
 
 ## Enclosure Acrylic
 

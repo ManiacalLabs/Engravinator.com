@@ -9,6 +9,7 @@
 			"hardware",
 			"motion",
 			"electronics",
+			"misc",
 			"enclosure"
 		],
 		"hardware": {
@@ -260,6 +261,16 @@
 				{
 					"part_price": 1,
 					"quantity": 2,
+					"name": "2-wire 20-24AWG Wire (meters)",
+					"part_number": "See BOM Guide",
+					"price_per_unit": 1,
+					"minimum_quantity": 1,
+					"note": "",
+					"url": "https://engravinator.com/mk1/BOM_Guide.html"
+				},
+				{
+					"part_price": 1,
+					"quantity": 2,
 					"name": "Limit Switch",
 					"part_number": "D2F-01FL3-D3",
 					"price_per_unit": 1,
@@ -317,11 +328,11 @@
 					"part_price": 0.0555,
 					"quantity": 28,
 					"name": "M3 Nut",
-					"part_number": "Market Price",
+					"part_number": "See BOM Guide",
 					"price_per_unit": 5.55,
 					"minimum_quantity": 100,
 					"note": "",
-					"url": ""
+					"url": "https://engravinator.com/mk1/BOM_Guide.html"
 				},
 				{
 					"part_price": 0.26,
@@ -364,7 +375,43 @@
 					"url": "https://engravinator.com/mk1/BOM_Guide.html"
 				}
 			]
+		},
+		"misc": {
+			"section_title": "Miscellaneous Components",
+			"section_desc": "",
+			"parts": [
+				{
+					"part_price": 1,
+					"quantity": 1,
+					"name": "2mm Heat Shrink Tubing (100mm)",
+					"part_number": "See BOM Guide",
+					"price_per_unit": 1,
+					"minimum_quantity": 1,
+					"note": "",
+					"url": "https://engravinator.com/mk1/BOM_Guide.html"
+				},
+				{
+					"part_price": 0.02,
+					"quantity": 100,
+					"name": "2.5x1x100mm Zip Ties",
+					"part_number": "See BOM Guide",
+					"price_per_unit": 0.02,
+					"minimum_quantity": 1,
+					"note": "",
+					"url": "https://engravinator.com/mk1/BOM_Guide.html"
+				},
+				{
+					"part_price": 2,
+					"quantity": 4,
+					"name": "25x25mm Silicone Feet",
+					"part_number": "See BOM Guide",
+					"price_per_unit": 2,
+					"minimum_quantity": 1,
+					"note": "",
+					"url": "https://engravinator.com/mk1/BOM_Guide.html"
+				}
+			]
 		}
 	},
-	"generated_at": 1569196496115
+	"generated_at": 1569269716905
 }
