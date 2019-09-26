@@ -199,6 +199,15 @@ function pageData(file) {
         // It's ok if we don't have supplemental data
     }
 
+    if (file.path.endsWith('content/index.html')) {
+        try {
+            var mk1_file = path.join(path.dirname(file.path), 'mk1/index.json');
+            data.data.mk1 = JSON.parse(fs.readFileSync(mk1_file));
+        } catch (err) {
+            console.log('Unable to import Mk1 info to index.html');
+        }
+    }
+
     return data;
 }
 

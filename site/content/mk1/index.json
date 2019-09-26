@@ -74,5 +74,22 @@
             }
         ],
         "default": "mk1/hero_wide.png"
-    }
+    },
+    "device_images": [
+        {
+            "id": "side-1",
+            "thumbnail": "side1_thumbnail.png",
+            "full": "side1.jpg"
+        },
+        {
+            "id": "side-2",
+            "thumbnail": "side2_thumbnail.png",
+            "full": "side2.jpg"
+        },
+        {
+            "id": "side-3",
+            "thumbnail": "side3_thumbnail.png",
+            "full": "side3.jpg"
+        }
+    ]
 }

@@ -1,0 +1,60 @@
+{% macro deviceImages(site, helpers, device_images) -%}
+{% for image in device_images %}
+<div class="large reveal" id="{{ image.id }}" data-reveal data-v-offset="10px">
+    {{ helpers.image(site, image.full) }}
+    <button class="close-button" data-close aria-label="Close reveal" type="button">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="cell medium-4">
+    <a href="#" data-open="{{ image.id }}">{{ helpers.image(site, image.thumbnail) }}</a>
+</div>
+{% endfor %}
+{%- endmacro %}
+
+{% macro awesomeFeatures(site, helpers, highlighted_features) -%}
+<h1 class="text-center">Awesome Features</h1>
+<div class="grid-x grid-margin-x grid-margin-y">
+    {% for feature in highlighted_features %}
+    <div class="cell medium-4">
+        <h2 class="h3">{{ feature.title }}</h2>
+        {{ helpers.image(site, feature.image, 'thumbnail') }}
+        <p>{{ feature.copy | safe }}</p>
+    </div>
+    {% endfor %}
+</div>
+{%- endmacro %}
+
+{% macro buildSteps(site, helpers, build_steps) -%}
+<h1 class="text-center">Assemble Your Own</h1>
+<div class="grid-x grid-margin-x grid-margin-y">
+    {% for build_step in build_steps %}
+    <div class="cell medium-4">
+        <div class="media-object">
+            <div class="media-object-section align-self-middle">
+                <div>
+                    <a href="{{ build_step.url }}">{{ helpers.image(site, build_step.icon) }}</a>
+                </div>
+            </div>
+            <div class="media-object-section">
+                <h2 class="h3"><a href="{{ helpers.getUrl(site, build_step.url) }}">{{ build_step.title }}</a></h2>
+                <p>{{ build_step.subtitle }}</p>
+            </div>
+        </div>
+        <hr />
+        <p>{{ build_step.copy | safe }}</p>
+    </div>
+    {% endfor %}
+</div>
+{%- endmacro %}
+
+{% macro techSpecs(site, helpers, features) -%}
+<h1 class="text-center">Technical Specs</h1>
+<div class="cell medium-8 large-offset-2">
+    <ul>
+        {% for feature in features %}
+        <li>{{ feature | safe }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{%- endmacro %}
