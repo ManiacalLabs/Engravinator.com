@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Overpass';
+    src: url(/fonts/Overpass-Regular.woff2) format('woff2'),
+         url(/fonts/Overpass-Regular.woff) format('woff'),
+         url(/fonts/Overpass-Regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html,
 body {
     margin: 0px;
