@@ -1,3 +1,7 @@
+---
+page_title: Engravinator Mk1 &mdash; BOM Buyer's Guide
+---
+
 # BOM Buyer's Guide
 
 **Note:** If you purchased a full kit, you can ignore this entire document as it's been taken care of for you.
