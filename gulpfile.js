@@ -3,17 +3,22 @@ var cleanCSS = require('gulp-clean-css');
 var connect = require('gulp-connect');
 var data = require('gulp-data');
 var deploy = require('gulp-gh-pages');
+var frontmatter = require('gulp-front-matter');
 var fs = require('fs');
 var gulp = require('gulp');
 var htmlmin = require('gulp-htmlmin');
+var markdown = require('gulp-markdown');
 var merge = require('merge-stream');
 var numeralFilter = require('nunjucks-numeral-filter');
 var nunjucks = require('gulp-nunjucks-render');
 var path = require('path');
+var through = require('through2');
+var lodash = require('lodash');
 
 var DIST = __dirname + '/dist';
 var DIST_SELECTOR = DIST + '/**/*';
 var SITE = __dirname + '/site';
+var DOCS = __dirname + '/docs';
 var CNAME_SELECTOR = SITE + '/assets/CNAME';
 
 var PATHS = {
@@ -28,6 +33,15 @@ var PATHS = {
     FONTS: {
         SRC: SITE + '/assets/fonts/**',
         DEST: DIST + '/fonts'
+    },
+    DOCS: {
+        SRC: DOCS + '/**/*.md',
+        IMAGES: {
+            SRC: DOCS + '/mk1/img/*.gif',
+            DEST: DIST + '/mk1/img/'
+        },
+        DATA: DOCS + '/**/*.json',
+        DEST: DIST + '/**/*.html'
     },
     PAGES: {
         SRC: SITE + '/content/**/*.html',
@@ -48,6 +62,9 @@ var BOWER_STYLES = [
     'bower_components/foundation-sites/dist/css/foundation.min.css',
     'bower_components/foundation-sites/dist/css/foundation.min.css.map'
 ];
+
+var DOCS_PRE = '{% extends "base.html" %}\n{% block content %}\n<div class="grid-container">\n';
+var DOCS_POST = '</div>\n{% endblock %}';
 
 var clean_params = {
     read: false,
@@ -175,6 +192,16 @@ function images() {
 }
 
 /**
+ * Copies the docs images
+ * @returns {Object} The task stream
+ */
+function docimages() {
+    return gulp.src(PATHS.DOCS.IMAGES.SRC)
+        .pipe(gulp.dest(PATHS.DOCS.IMAGES.DEST))
+        .pipe(connect.reload());
+}
+
+/**
  * Copies all the fonts
  * @returns {Object} The task stream
  */
@@ -184,12 +211,22 @@ function fonts() {
 }
 
 /**
+ * Adds filters to the nunjucks environement
+ * @param {Object} env The nunjucks environment
+ * @returns {undefined}
+ */
+function nunjucksEnvironment(env) {
+    env.addFilter('numeral', numeralFilter);
+}
+
+/**
  * Loads the JSON data
  * @param {String} file The filename
+ * @param {String} extension The file extension
  * @returns {String} The json data
  */
-function pageData(file) {
-    var data_file = path.join(path.dirname(file.path), path.basename(file.path, '.html') + '.json');
+function getJsonForFile(file, extension) {
+    var data_file = path.join(path.dirname(file.path), path.basename(file.path, '.' + extension) + '.json');
     var data = { site: site };
     data.site.path = path.basename(file.path);
 
@@ -198,6 +235,89 @@ function pageData(file) {
     } catch (err) {
         // It's ok if we don't have supplemental data
     }
+
+    return data;
+}
+
+/**
+ * Loads the JSON data
+ * @param {String} file The filename
+ * @returns {String} The json data
+ */
+function docsData(file) {
+    var data = getJsonForFile(file, 'html');
+    var file_data = { data: lodash.assign({}, file.data) };
+
+    return lodash.assign({}, file_data, data);
+}
+
+/**
+ * Add templating to docs
+ * @param {Object} file The file
+ * @param {Function} enc The transform function
+ * @param {Function} cb The callback
+ * @returns {undefined}
+ */
+function templateDocs(file, enc, cb) {
+    var pre_file = Buffer.from(DOCS_PRE, 'utf8');
+    var contents = Buffer.from(file.contents, 'utf8');
+    var post_file = Buffer.from(DOCS_POST, 'utf8');
+
+    var total_length = pre_file.length + contents.length + post_file.length;
+
+    file.contents = Buffer.concat([ pre_file, contents, post_file ], total_length);
+    cb(null, file);
+}
+
+/**
+ * Render out the header
+ * @param {String} text The text
+ * @param {Number} level The level
+ * @returns {String} The heading
+ */
+function heading_render(text, level) {
+    var style_class = level === 1 ? 'text-center' : '';
+    var id = text.toLowerCase().replace(/[^\w]+/g, '-');
+
+    return `<h${level} class="${style_class}" id="${id}">${text}</h${level}>`;
+}
+
+/**
+ * Build the docs
+ * @return {Object} The task stream
+ */
+function docs() {
+    var nunjucks_config = {
+        path: PATHS.TEMPLATES.SRC,
+        manageEnv: nunjucksEnvironment
+    };
+
+    var frontmatter_config = {
+        property: 'data',
+        remove: true
+    };
+
+    var markdown_render = new markdown.marked.Renderer();
+    markdown_render.heading = heading_render;
+
+    return gulp.src(PATHS.DOCS.SRC)
+        .pipe(frontmatter(frontmatter_config))
+        .pipe(markdown({renderer: markdown_render}))
+        .pipe(through.obj(templateDocs))
+        .pipe(data(docsData))
+        .pipe(nunjucks(nunjucks_config))
+        .pipe(htmlmin({ collapseWhitespace: true }))
+        .pipe(gulp.dest(DIST))
+        .pipe(connect.reload());
+}
+
+/**
+ * Loads the JSON data
+ * @param {String} file The filename
+ * @returns {String} The json data
+ */
+function pageData(file) {
+    var data = getJsonForFile(file, 'html');
 
     if (file.path.endsWith('content/index.html')) {
         try {
@@ -212,23 +332,15 @@ function pageData(file) {
 }
 
 /**
- * Adds filters to the nunjucks environement
- * @param {Object} env The nunjucks environment
- * @returns {undefined}
- */
-function nunjucksEnvironment(env) {
-    env.addFilter('numeral', numeralFilter);
-}
-
-/**
- * Build the pages
+ * Build the docs
  * @return {Object} The task stream
  */
-function pages() {
+function static_html() {
     var nunjucks_config = {
         path: PATHS.TEMPLATES.SRC,
         manageEnv: nunjucksEnvironment
     };
+
     return gulp.src(PATHS.PAGES.SRC)
         .pipe(data(pageData))
         .pipe(nunjucks(nunjucks_config))
@@ -244,11 +356,13 @@ function pages() {
 function watch() {
     gulp.watch(PATHS.CSS.SRC, styles);
     gulp.watch(PATHS.IMAGES.SRC, images);
+    gulp.watch(PATHS.DOCS.IMAGES.SRC, docimages);
     gulp.watch(PATHS.FONTS.SRC, fonts);
-    gulp.watch([ PATHS.TEMPLATES.SRC, PATHS.PAGES.SRC, PATHS.PAGES.DATA ], pages);
+    gulp.watch([ PATHS.TEMPLATES.SRC, PATHS.PAGES.SRC, PATHS.PAGES.DATA, PATHS.DOCS.SRC, PATHS.DOCS.DATA ], pages);
 
     connect.server({
         root: DIST,
+        host: '0.0.0.0',
         port: 9000,
         livereload: true
     });
@@ -272,8 +386,9 @@ function ghpages() {
         .pipe(deploy());
 }
 
+var pages = gulp.series(static_html, docs);
 var cleanall = gulp.parallel(cleanpages, cleanimages, cleanfonts, cleanscripts, cleanstyles);
-var assets = gulp.series(bowerscripts, styles, images, fonts, pages);
+var assets = gulp.series(bowerscripts, styles, images, docimages, fonts, pages);
 var default_task = gulp.series(cleanall, assets);
 
 exports.default = default_task;

@@ -26,6 +26,12 @@
     <script>
         $(document).foundation();
     </script>
+
+<script>
+        jQuery(window).on('changed.zf.mediaquery', function() {
+            $('.is-dropdown-submenu.invisible').removeClass('invisible');
+          });
+</script>
 </body>
 
 </html>

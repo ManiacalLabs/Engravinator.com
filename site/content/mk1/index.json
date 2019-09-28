@@ -37,22 +37,22 @@
             "title": "Buy",
             "subtitle": "Buy the parts you need",
             "icon": "icons/package.png",
-            "url": "buy",
-            "copy": "Our <a href=\"buy\">bill of materials</a> has all the parts you need to purchase to build your own Engravinator MK1."
+            "url": "/mk1/buy",
+            "copy": "Our <a href=\"/mk1/buy\">bill of materials</a> has all the parts you need to purchase to build your own Engravinator MK1."
         },
         {
             "title": "Print",
             "subtitle": "Print the parts you need",
             "icon": "icons/printer.png",
-            "url": "print",
-            "copy": "Our <a href=\"print\">print list</a> has all the parts you need to print (or have printed) to build the Engravinator MK1."
+            "url": "/mk1/print",
+            "copy": "Our <a href=\"/mk1/print\">print list</a> has all the parts you need to print (or have printed) to build the Engravinator MK1."
         },
         {
             "title": "Build",
             "subtitle": "Assemble the MK1",
             "icon": "icons/tool.png",
-            "url": "build",
-            "copy": "Once you've got all the parts we've got the <a href=\"build\">build steps</a> all ready for you."
+            "url": "/mk1/build",
+            "copy": "Once you've got all the parts we've got the <a href=\"/mk1/build\">build steps</a> all ready for you."
         }
     ],
     "features": [

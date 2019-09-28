@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'Overpass';
     src: url(/fonts/Overpass-Regular.woff2) format('woff2'),
-         url(/fonts/Overpass-Regular.woff) format('woff'),
-         url(/fonts/Overpass-Regular.ttf) format('truetype');
+        url(/fonts/Overpass-Regular.woff) format('woff'),
+        url(/fonts/Overpass-Regular.ttf) format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -58,13 +58,31 @@ footer {
 }
 
 #menu,
-#menu ul {
+#menu ul,
+.drilldown a {
     background-color: #000;
 }
 
-#menu ul li a, .title-bar-title a {
+.drilldown a {
+    padding: .7rem 1.9rem .7rem 1rem;
+}
+
+#menu ul li a,
+.title-bar-title a {
     color: #b3b3b3;
     font-weight: bold;
+}
+
+.dropdown.menu>li.is-dropdown-submenu-parent>a::after {
+    border-color: #b3b3b3 transparent transparent !important;
+}
+
+.drilldown .is-drilldown-submenu-parent>a::after {
+    border-color: transparent transparent transparent #b3b3b3 !important;
+}
+
+.drilldown .js-drilldown-back>a::before {
+    border-color: transparent #b3b3b3 transparent transparent !important;
 }
 
 .content {

@@ -1,14 +1,23 @@
 {% macro navigation(site, helpers) -%}
 <div class="title-bar" data-responsive-toggle="menu" data-hide-for="medium">
     <button class="menu-icon" type="button" data-toggle="menu"></button>
-    <div class="title-bar-title"><a href="{{ helpers.getUrl(site, '/') }}"">{{ site.title }}</a></div>
+    <div class="title-bar-title"><a href="{{ helpers.getUrl(site, '/') }}">{{ site.title }}</a></div>
 </div>
 
 <div class="top-bar" id="menu">
     <div class="top-bar-left">
-        <ul class="dropdown menu" data-dropdown-menu>
+        <ul class="dropdown menu" data-responsive-menu="drilldown medium-dropdown">
             <li class="show-for-medium"><a href="{{ helpers.getUrl(site, '/') }}">{{ site.title }}</a></li>
-            <li><a href="{{ helpers.getUrl(site, '/mk1') }}">Mk1</a></li>
+            <li>
+                <a href="{{ helpers.getUrl(site, '/mk1') }}">Mk1</a>
+                <ul class="menu vertical">
+                    <li class="show-for-small-only"><a href="{{ helpers.getUrl(site, '/mk1/') }}">Mk1</a></li>
+                    <li><a href="{{ helpers.getUrl(site, '/mk1/faq') }}">FAQ</a></li>
+                    <li><a href="{{ helpers.getUrl(site, '/mk1/buy') }}">Buy</a></li>
+                    <li><a href="{{ helpers.getUrl(site, '/mk1/print') }}">Print</a></li>
+                    <li><a href="{{ helpers.getUrl(site, '/mk1/build') }}">Build</a></li>
+                </ul>
+            </li>
             <li><a href="https://forum.maniacallabs.com/c/engravinator">Forum</a></li>
         </ul>
     </div>

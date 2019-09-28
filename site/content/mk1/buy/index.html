@@ -17,6 +17,75 @@
 {% endif %}
 {%- endmacro %}
 
+{% macro desktop_table(bom) -%}
+{% for section_name in bom.section_order %}
+<div class="cell margin-medium-bottom">
+    {% set section=bom[section_name] %}
+    {% set section_total = 0 %}
+    <h2 class="h3">{{ section.section_title }}</h2>
+    <p class="margin-medium-bottom">{{ section.section_desc | safe }}</p>
+    <table>
+        <thead>
+            <th colspan="2">Part Name</th>
+            <th>Part Number</th>
+            <th class="text-center">Quantity</th>
+            <th class="text-center">Unit Price</th>
+            <th class="text-center">Total Price</th>
+        </thead>
+        <tbody>
+            {% for part in section.parts %}
+            {% set section_total = section_total + (part.quantity * part.part_price) %}
+            <tr>
+                <td class="info-col">{{ part_note(part) }}</td>
+                <td>{{ part.name }}</td>
+                <td>{{ part_number(part) }}</td>
+                <td class="text-center">{{ part.quantity }}</td>
+                <td class="text-center">{{ part.part_price | numeral("$0,0.00") }}</td>
+                <td class="text-center">{{ (part.quantity * part.part_price) | numeral("$0,0.00") }}</td>
+            </tr>
+            {% endfor %}
+            <tr class="total">
+                <td colspan="5"></td>
+                <td class="text-center">{{ section_total | numeral("$0,0.00") }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endfor %}
+{%- endmacro %}
+
+{% macro mobile_table(bom) -%}
+{% for section_name in bom.section_order %}
+<div class="cell margin-medium-bottom">
+    {% set section=bom[section_name] %}
+    {% set section_total = 0 %}
+    <h2 class="h3">{{ section.section_title }}</h2>
+    <p class="margin-medium-bottom">{{ section.section_desc | safe }}</p>
+    <table class="stack">
+        <thead>
+            <th>Part</th>
+            <th>Part Number</th>
+            <th>Cost</th>
+        </thead>
+        <tbody>
+            {% for part in section.parts %}
+            {% set section_total = section_total + (part.quantity * part.part_price) %}
+            <tr>
+                <td>{{ part_note(part) }} {{ part.name }} (x{{ part.quantity }})</td>
+                <td>{{ part_number(part) }}</td>
+                <td class="text-right">{{ part.part_price | numeral("$0,0.00") }} x {{ part.quantity }} =
+                    {{ (part.quantity * part.part_price) | numeral("$0,0.00") }}</td>
+            </tr>
+            {% endfor %}
+            <tr class="total">
+                <td colspan="2" class="text-right">{{ section_total | numeral("$0,0.00") }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endfor %}
+{%- endmacro %}
+
 {% block content %}
 <div class="grid-container">
     <div class="grid-x grid-margin-x">
@@ -25,45 +94,17 @@
         </div>
         <div class="cell margin-medium-bottom">
             <p>In order to build an Engravinator follow this bill of materials. The
-                parts listed here are optimized for building a single unit. Please check out the <a href="https://engravinator.com/mk1/BOM_Guide.html">BOM Guide</a> before ordering any components.
+                parts listed here are optimized for building a single unit. Please check out the <a
+                    href="{{ helpers.getUrl(site, '/mk1/BOM_Guide.html') }}">BOM Guide</a> before ordering any
+                components.
             </p>
-            <p>When an item is listed as <a href="https://engravinator.com/mk1/BOM_Guide.html">"See BOM Guide"</a>, more detailed explaination is needed. Please follow the link. This is typically because these parts are not properly priced on a permanent site or require too large an order for a single unit. Prices listed for these components are estimates.</p>
+            <p>When an item is listed as <a href="{{ helpers.getUrl(site, '/mk1/BOM_Guide.html') }}">"See BOM
+                    Guide"</a>, more detailed explanation is needed. Please follow the link. This is typically because
+                these parts are not properly priced on a permanent site or require too large an order for a single unit.
+                Prices listed for these components are estimates.</p>
         </div>
-        {% for section_name in data.bom.section_order %}
-        <div class="cell margin-medium-bottom">
-
-            {% set section=data.bom[section_name] %}
-            {% set section_total = 0 %}
-            <h2 class="h3">{{ section.section_title }}</h2>
-            <p class="margin-medium-bottom">{{ section.section_desc | safe }}</p>
-            <table>
-                <thead>
-                    <th colspan="2">Part Name</th>
-                    <th>Part Number</th>
-                    <th class="text-center">Quantity</th>
-                    <th class="text-center">Unit Price</th>
-                    <th class="text-center">Total Price</th>
-                </thead>
-                <tbody>
-                    {% for part in section.parts %}
-                    {% set section_total = section_total + (part.quantity * part.part_price) %}
-                    <tr>
-                        <td class="info-col">{{ part_note(part) }}</td>
-                        <td>{{ part.name }}</td>
-                        <td>{{ part_number(part) }}</td>
-                        <td class="text-center">{{ part.quantity }}</td>
-                        <td class="text-center">{{ part.part_price | numeral("$0,0.00") }}</td>
-                        <td class="text-center">{{ (part.quantity * part.part_price) | numeral("$0,0.00") }}</td>
-                    </tr>
-                    {% endfor %}
-                    <tr class="total">
-                        <td colspan="5"></td>
-                        <td class="text-center">{{ section_total | numeral("$0,0.00") }}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        {% endfor %}
+        <div class="cell show-for-medium">{{ desktop_table(data.bom) }}</div>
+        <div class="cell show-for-small-only">{{ mobile_table(data.bom) }}</div>
     </div>
 </div>
 {% endblock %}

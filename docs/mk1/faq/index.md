@@ -1,4 +1,8 @@
-# Engravinator FAQ
+---
+page_title: Engravinator Mk1 &mdash; FAQ
+---
+
+# Engravinator Mk1 &mdash; FAQ
 
 ## Why did you create the Engravinator?
 
@@ -16,32 +20,32 @@ Even this website and guide are available in the [Engravinator.com GitHub reposi
 
 It was designed specifically to be used the popular [Grbl](https://github.com/gnea/grbl) firmware. It's simple to use, robust, and has a great community. As such you could technically use any Grbl controller but we recommend using our own [Platypus](https://github.com/ManiacalLabs/Platypus) Grbl board, which was designed specifically for use with the Engravinator.
 
-However, we provide mounts for multiple control boards, all of which can be found in the [fabrication files](/Mk1/Fabrication/3D%20Printed/Controller%20Box). More details can be found in that directory along with each file.
+However, we provide mounts for multiple control boards, all of which can be found in the [fabrication files](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Controller_Box). More details can be found in that directory along with each file.
 
 ## What do I need to build an Engravinator?
 
-We tried to keep the design as simple and easy to build as possible. All the hardware can be easily ordered from the links provided in the [Bill of Materials](/mk1/buy/). All other components are either 3D printed (required core components) or laser cut (optional enclosure) and more details can be found on the [Fabrication page](/mk1/Fabrication.html/).
+We tried to keep the design as simple and easy to build as possible. All the hardware can be easily ordered from the links provided in the [Bill of Materials](/mk1/buy/). All other components are either 3D printed (required core components) or laser cut (optional enclosure) and more details can be found on the [Fabrication page](/mk1/print/).
 
 The only tools required are:
 
-- 4mm Hex Key
-- 2.5mm Hex Key
-- 2mm Hex Key
-- 1.5mm Hex Key
-- Flush Cut Snippers
-- Wire Strippers
-- Scissors
-- Square
-- Soldering Iron
-- Flat Surface
+-   4mm Hex Key
+-   2.5mm Hex Key
+-   2mm Hex Key
+-   1.5mm Hex Key
+-   Flush Cut Snippers
+-   Wire Strippers
+-   Scissors
+-   Square
+-   Soldering Iron
+-   Flat Surface
 
-For more information, please check out the [Assembly Guide](/mk1/assembly/).
+For more information, please check out the [Assembly Guide](/mk1/build/).
 
 ## How long does it take to build?
 
 Depending on your skill level, it should take 4-8 hours to complete.
 
-For more information, please check out the [Assembly Guide](/mk1/assembly/).
+For more information, please check out the [Assembly Guide](/mk1/build/).
 
 ## How much does it cost to build?
 
@@ -67,12 +71,12 @@ First, please note: The Engravinator is **not** meant for cutting! It does not h
 
 This is largely dependent on your laser module of choice, but assuming you are using a standard UV diode laser you will generally want to stick to darker, organic materials. Overly white or clean materials will not absorb enough of the laser to work correctly. Materials we've found to work well include (but are not limited to):
 
-- Paper / Cardstock (not white)
-- Cardboard
-- Poplar
-- Birch
-- Balsa
-- Cherry
-- MDF
-- Slate
-- Cork
+-   Paper / Cardstock (not white)
+-   Cardboard
+-   Poplar
+-   Birch
+-   Balsa
+-   Cherry
+-   MDF
+-   Slate
+-   Cork

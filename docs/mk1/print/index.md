@@ -1,4 +1,7 @@
-# Fabricating Engravinator Components
+---
+page_title: Engravinator Mk1 &mdash; Print
+---
+# Engravinator Mk1 &mdash; Print
 
 The Engravinator is specifically designed to utilize the benefits of 3D printed components as much as possible. All of the core, required, non-metal components can be printed on most commodity 3D printers. If you do not access to a 3D printer there are many online services such as [MakeXYZ](https://makexyz.com) or [Shapeways](https://shapeways.com) that could print them for you. However, going the online service route could add significant cost. We recommend first trying to find a makerspace, library, or school in your area that might have a printer you can use.
 
@@ -10,10 +13,10 @@ While there are links to individual files listed here we recommend downloading t
 
 All components should be printed in PLA with the following settings:
 
-- 0.4mm nozzle diameter
-- 0.2mm layer height
-- 20% Grid Infill
-- Top & Bottom layers Rectilinear Infill
+-   0.4mm nozzle diameter
+-   0.2mm layer height
+-   20% Grid Infill
+-   Top & Bottom layers Rectilinear Infill
 
 Any other settings would depend on your particular filament and printer capability but we recommend using high quality filament with consistent diameter. We are partial to Atomic Filament or Prusa brands (though are in no way sponsored by those companies).
 
@@ -31,26 +34,26 @@ It includes everything in a single file, already laid out for maximum print effi
 
 If you either have a smaller printer or just want to print individual components you can use the files listed below to print as desired. *Note that for components prefixed with a number (such as `x4_RodHolder.stl`) that value is the number of copies required for the component.*
 
-- [HeightTool.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Core_Components/HeightTool.stl)
-- [x4_RodHolder.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Core_Components/x4_RodHolder.stl)
-- [X_Back_Plate.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Core_Components/X_Back_Plate.stl)
-- [X_Front_Plate.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Core_Components/X_Front_Plate.stl)
-- [X_Motor_Mount.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Core_Components/X_Motor_Mount.stl)
-- [X_Tensioner.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Core_Components/X_Tensioner.stl)
-- [Y_Drive_Main.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Core_Components/Y_Drive_Main.stl)
-- [Y_Drive_Plate.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Core_Components/Y_Drive_Plate.stl)
-- [Y_Idle_Main.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Core_Components/Y_Idle_Main.stl)
-- [Y_Idle_Plate.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Core_Components/Y_Idle_Plate.stl)
-- [Y_Motor_Mount.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Core_Components/Y_Motor_Mount.stl)
-- [Y_Pulley_Mount.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Core_Components/Y_Pulley_Mount.stl)
-- [Y_Tensioner.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Core_Components/Y_Tensioner.stl)
+-   [HeightTool.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Core_Components/HeightTool.stl)
+-   [x4_RodHolder.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Core_Components/x4_RodHolder.stl)
+-   [X_Back_Plate.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Core_Components/X_Back_Plate.stl)
+-   [X_Front_Plate.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Core_Components/X_Front_Plate.stl)
+-   [X_Motor_Mount.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Core_Components/X_Motor_Mount.stl)
+-   [X_Tensioner.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Core_Components/X_Tensioner.stl)
+-   [Y_Drive_Main.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Core_Components/Y_Drive_Main.stl)
+-   [Y_Drive_Plate.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Core_Components/Y_Drive_Plate.stl)
+-   [Y_Idle_Main.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Core_Components/Y_Idle_Main.stl)
+-   [Y_Idle_Plate.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Core_Components/Y_Idle_Plate.stl)
+-   [Y_Motor_Mount.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Core_Components/Y_Motor_Mount.stl)
+-   [Y_Pulley_Mount.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Core_Components/Y_Pulley_Mount.stl)
+-   [Y_Tensioner.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Core_Components/Y_Tensioner.stl)
 
 ## Controller Mount
 
 Since there are multiple options for supported controllers, you will need to at least print one of the following base plates, for your controller:
 
-- [Maniacal Labs Platypus](https://github.com/ManiacalLabs/Platypus) -> [BasePlate_Platypus.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Controller_Box/BasePlate_Platypus.stl)
-- [Bart Dring Pen/Laser Controller](https://www.tindie.com/products/33366583/penlaser-bot-controller/) -> [BasePlate_BartDring_PenLaserController.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Controller_Box/BasePlate_BartDring_PenLaserController.stl)
+-   [Maniacal Labs Platypus](https://github.com/ManiacalLabs/Platypus) -> [BasePlate_Platypus.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Controller_Box/BasePlate_Platypus.stl)
+-   [Bart Dring Pen/Laser Controller](https://www.tindie.com/products/33366583/penlaser-bot-controller/) -> [BasePlate_BartDring_PenLaserController.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Controller_Box/BasePlate_BartDring_PenLaserController.stl)
 
 Then, optionally print the cover which fits on all provided base plates:
 
@@ -73,16 +76,16 @@ If the above is not an option, there are a number of online laser cutting servic
 
 You will need to cut one each of the following DXF files:
 
-- [BackPanel.dxf](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/Laser_Cut/BackPanel.dxf)
-- [FilterHolder.dxf](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/Laser_Cut/FilterHolder.dxf)
-- [FrontPanel.dxf](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/Laser_Cut/FrontPanel.dxf)
-- [LeftPanel.dxf](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/Laser_Cut/LeftPanel.dxf)
-- [RightPanel.dxf](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/Laser_Cut/RightPanel.dxf)
-- [TopPanel.dxf](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/Laser_Cut/TopPanel.dxf)
+-   [BackPanel.dxf](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/Laser_Cut/BackPanel.dxf)
+-   [FilterHolder.dxf](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/Laser_Cut/FilterHolder.dxf)
+-   [FrontPanel.dxf](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/Laser_Cut/FrontPanel.dxf)
+-   [LeftPanel.dxf](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/Laser_Cut/LeftPanel.dxf)
+-   [RightPanel.dxf](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/Laser_Cut/RightPanel.dxf)
+-   [TopPanel.dxf](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/Laser_Cut/TopPanel.dxf)
 
 Optionally, we've designed a bottom panel that aids with aligning the laser (since the working area is not centered to the machine). The actual working area position is dependent on the laser module in use. Select the necessary one below based on the module X,Y dimensions:
 
-- 33mm x 33mm -> [TargetingFrame_33x33.svg](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/Laser_Cut/TargetingFrame_33x33.svg)
+-   33mm x 33mm -> [TargetingFrame_33x33.svg](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/Laser_Cut/TargetingFrame_33x33.svg)
 
 Note that the linked file is an SVG instead of DXF. This is because the black lines should be cut but the red lines just need to be engraved as they are simple measurement markings.
 
@@ -94,9 +97,9 @@ Next, you need to print some additional components using the same settings descr
 
 You can, however, find the individual files below. *Note that for components prefixed with a number (such as `x8_PanelClips.stl`) that value is the number of copies required for the component.*
 
-- [x2_Handles.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Enclosure/x2_Handles.stl)
-- [x4_ExtensionBracket.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Enclosure/x4_ExtensionBracket.stl)
-- [x4_Feet.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Enclosure/x4_Feet.stl)
-- [x8_PanelClips.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Enclosure/x8_PanelClips.stl)
+-   [x2_Handles.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Enclosure/x2_Handles.stl)
+-   [x4_ExtensionBracket.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Enclosure/x4_ExtensionBracket.stl)
+-   [x4_Feet.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Enclosure/x4_Feet.stl)
+-   [x8_PanelClips.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Enclosure/x8_PanelClips.stl)
 
 Note, if you are not going to use the optional framing panel (see more below), you do not need to print `x4_Feet.stl`.
