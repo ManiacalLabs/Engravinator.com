@@ -12,7 +12,7 @@ before_script:
   - npm run lint
 script:
   - npm run bower
-  - npm run dist
+  - npm run build
 deploy:
   provider: pages
   skip_cleanup: true
