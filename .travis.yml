@@ -7,24 +7,23 @@ node_js:
 - '8'
 install:
 - npm install
-before_script:
-- git remote set-url origin "https://${GH_TOKEN}@github.com/ManiacalLabs/Engravinator.com.git"
-- git config --global user.email "patrick@deadlypenguin.com"
-- git config --global user.name "Travis-CI"
 cache: npm
-jobs:
-  include:
-    - stage: test
-      script: npm run lint
-    - stage: deploy
-      script:
-        - cd node_modules/gulp-gh-pages && npm install --save gift@0.10.2 && cd ../../
-        - npm run bower
-        - npm run deploy
-stages:
-  - test
-  - name: deploy
-    if: branch = master
+before_script:
+  - npm run lint
+script:
+  - npm run bower
+  - npm run dist
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: "$GITHUB_TOKEN"
+  keep_history: false
+  local_dir: dist
+  email: patrick@deadlypenguin.com
+  name: Travis-CI
+  fqdn: engravinator.com
+  on:
+    branch: master
 env:
   global:
   - secure: cnP5zWk8gvkyt35S9JP8S/5ovjP9P5FIig5uQ7eLyJCDj7ndwH1OSNIjBgtubg/vFPaYP4FG55hqou2iNfQPNSfeiOzG5h/yyxemIkyF/Qgp901mS+KqGsEAjAYI/7rgX5PG4bwp9luTMPSh1PgGTKPAxLIT/pzJeRz/qFGLJQ8o6MIFNzSKogsjraqbIzmvF+qXOmWR7ZCwR5LE4rV5EE6DEl7x45XATKd7lhfcPKFRbUpV1ffxKtq6U8BY96lQ9sMsi2ldsG6rI3XQb1KWpd6a31GFuQA1dGie31oxi0yZpKu2nqjkmZn7g4G5e8E7aDaaAOtXgRoZDNXbsELZDF/qhWtq2ZYe1/S9l6B0N5dGhJrtoH7AyHR34d8kvM8lmw9TsO/wmpdb6GrJ7pA4X+LAubSVrxadGYvuC65Wi2BhgkeMSLeCW8YZm4pl/4F10NjSmN4iCgICCF4ShK7Ravs9iPTYPoy/W93TFSRwP8UPAfbAoa1sd+97XB+MTCM2menj9/V4gxymIkMVQwwduND606FhFsWLm+Ku9pCAS9bkxxl+Zwph/KmLTzZFnTkl0msK79RHCBblPzEmDpV2rS5ewHp3IzD5eiTOkffkxQPuYoVtb9x+8321E3rAx6zPVknI8QjurkMjbSA9TnrPyzJ2G6e/lRIMNAkre6MfvqE=
