@@ -35,9 +35,7 @@
   "dependencies": {},
   "devDependencies": {
     "bower": "^1.8.8",
-    "commander": "^3.0.1",
     "eslint": "^6.2.2",
-    "google-spreadsheet": "^2.0.8",
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-clean-css": "^4.2.0",
@@ -47,7 +45,6 @@
     "gulp-htmlmin": "^5.0.1",
     "gulp-markdown": "^5.0.0",
     "gulp-nunjucks-render": "^2.2.3",
-    "jsonfile": "^5.0.0",
     "lodash": "^4.17.15",
     "lodash.template": ">=4.5.0",
     "merge-stream": "^2.0.0",

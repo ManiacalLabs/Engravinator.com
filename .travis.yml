@@ -7,7 +7,10 @@ node_js:
 - '8'
 install:
 - npm install
-cache: npm
+cache:
+  directories:
+    - $HOME/.cache/bower
+    - $HOME/.npm
 before_script:
   - npm run lint
 script:

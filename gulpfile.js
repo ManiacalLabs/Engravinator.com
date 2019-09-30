@@ -1,18 +1,21 @@
+var fs = require('fs');
+var path = require('path');
+var through = require('through2');
+
+var lodash = require('lodash');
+var merge = require('merge-stream');
+
+var gulp = require('gulp');
 var clean = require('gulp-clean');
 var cleanCSS = require('gulp-clean-css');
 var connect = require('gulp-connect');
 var data = require('gulp-data');
 var frontmatter = require('gulp-front-matter');
-var fs = require('fs');
-var gulp = require('gulp');
 var htmlmin = require('gulp-htmlmin');
 var markdown = require('gulp-markdown');
-var merge = require('merge-stream');
-var numeralFilter = require('nunjucks-numeral-filter');
+
 var nunjucks = require('gulp-nunjucks-render');
-var path = require('path');
-var through = require('through2');
-var lodash = require('lodash');
+var numeralFilter = require('nunjucks-numeral-filter');
 
 var DIST = __dirname + '/dist';
 var SITE = __dirname + '/site';
