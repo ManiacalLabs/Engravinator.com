@@ -22,6 +22,10 @@ Any other settings would depend on your particular filament and printer capabili
 
 Final word on quality and accuracy: The Engravinator is designed with relatively tight tolerances so your prints need to be as accurate as possible. If you are unsure, we recommend printing this [calibration cube](https://www.thingiverse.com/thing:1586206) with the filament you want to use first as a test, with the above settings. If any dimension deviates from 20mm by more than 0.1mm, you should spend some time dialing in your extrusion settings for that filament until it is within 0.1mm tolerance.
 
+## Object Orientation
+
+All provided STL files have been exported in the orientation that they **must** be printed in! Therefore, if you are printing components individually, instead of the provided full print plates, **do not** change the model orientation when printing. Yes, this is so important that it got it's own section.
+
 ## Core Components
 
 The core, required components can be found under [/Mk1/Fabrication/3D_Printed/Core_Components](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Core_Components) in the [Engravinator GitHub repository](https://github.com/ManiacalLabs/Engravinator/).
