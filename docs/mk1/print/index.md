@@ -62,9 +62,9 @@ Then, optionally print the cover which fits on all provided base plates:
 
 ## Enclosure
 
-The full enclosure is an optional (but **HIGHLY RECOMMENDED!**) addon for the Engravinator. When made with the correct type of acrylic you can reasonably use the machine without worrying about safety glasses. If you do not opt to use the full enclosure **NEVER** use the Engravinator without all people in the room wearing appropriate safety glasses.
+The full enclosure is an optional (but **HIGHLY RECOMMENDED!**) addon for the Engravinator. When made with the correct type of acrylic you can reasonably use the machine without worrying about safety glasses. If you do not opt to use the full enclosure: **NEVER** use the Engravinator without all people in the room wearing appropriate safety glasses.
 
-__*DISCLAIMER*__: *Our research has shown that the suggested acrylic below will block any and all dangerous light coming from the laser, making it safe to use without special glasses. However, without acquiring laboratory tested (and much more expensive) acrylic that is specifically validated for this use we cannot guarantee your complete eye safety. Maniacal Labs assumes no responsibility for any damage or injury caused by use of these designs.*
+__*DISCLAIMER*__: *Our research has shown that the suggested acrylic below will block any dangerous light coming from the laser, making it safe to use without special glasses. However, without acquiring laboratory tested (and much more expensive) acrylic that is specifically validated for this use we cannot guarantee your complete eye safety. Maniacal Labs assumes no responsibility for any damage or injury caused by use of these designs.*
 
 ### Enclosure - Laser Cut Parts
 
@@ -102,4 +102,4 @@ You can, however, find the individual files below. *Note that for components pre
 -   [x4_Feet.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Enclosure/x4_Feet.stl)
 -   [x8_PanelClips.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Enclosure/x8_PanelClips.stl)
 
-Note, if you are not going to use the optional framing panel (see more below), you do not need to print `x4_Feet.stl`.
+Note, if you are not going to use the optional framing panel (as described above), you do not need to print `x4_Feet.stl`.
