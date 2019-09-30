@@ -2,7 +2,6 @@ var clean = require('gulp-clean');
 var cleanCSS = require('gulp-clean-css');
 var connect = require('gulp-connect');
 var data = require('gulp-data');
-var deploy = require('gulp-gh-pages');
 var frontmatter = require('gulp-front-matter');
 var fs = require('fs');
 var gulp = require('gulp');
@@ -16,10 +15,8 @@ var through = require('through2');
 var lodash = require('lodash');
 
 var DIST = __dirname + '/dist';
-var DIST_SELECTOR = DIST + '/**/*';
 var SITE = __dirname + '/site';
 var DOCS = __dirname + '/docs';
-var CNAME_SELECTOR = SITE + '/assets/CNAME';
 
 var PATHS = {
     CSS: {
@@ -368,24 +365,6 @@ function watch() {
     });
 }
 
-/**
- * Copies the cname file over for deployment
- * @returns {Object} The task stream
- */
-function cname() {
-    return gulp.src(CNAME_SELECTOR)
-        .pipe(gulp.dest(DIST));
-}
-
-/**
- * Deploys the changes to the gh-pages branch
- * @returns {Object} The task stream
- */
-function ghpages() {
-    return gulp.src(DIST_SELECTOR)
-        .pipe(deploy());
-}
-
 var pages = gulp.series(static_html, docs);
 var cleanall = gulp.parallel(cleanpages, cleanimages, cleanfonts, cleanscripts, cleanstyles);
 var assets = gulp.series(bowerscripts, styles, images, docimages, fonts, pages);
@@ -396,4 +375,3 @@ exports.build = default_task;
 exports.clean = cleanall;
 exports.dist = default_task;
 exports.watch = gulp.series(default_task, watch);
-exports.deploy = gulp.series(default_task, cname, ghpages);
