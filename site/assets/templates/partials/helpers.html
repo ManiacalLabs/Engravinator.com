@@ -9,11 +9,20 @@
 {% macro picture(site, images) -%}
 <picture>
 
-{% for alt in images.alt %}
-    <source media="(max-width: {{ alt.maxwidth }})" srcset="{{ getAbsolutePath(site, 'images/' + alt.src) }}">
-{% endfor %}
+    {% for alt in images.alt %}
+    {% set media=[] %}
 
-<img src="{{ getAbsolutePath(site, 'images/' + images.default) }}" >
+    {% if alt.maxwidth %}
+    {% set media=(media.push("(max-width: " + alt.maxwidth + ")"), media) %}
+    {% endif %}
+
+    {% if alt.minwidth %}
+    {% set media=(media.push("(min-width: " + alt.minwidth + ")"), media) %}
+    {% endif %}
+    <source media="{{ media | join(' and ') }}" srcset="{{ getAbsolutePath(site, 'images/' + alt.src) }}">
+    {% endfor %}
+
+    <img src="{{ getAbsolutePath(site, 'images/' + images.default) }}">
 </picture>
 {%- endmacro %}
 
