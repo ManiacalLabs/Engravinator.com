@@ -78,18 +78,60 @@
     "device_images": [
         {
             "id": "side-1",
-            "thumbnail": "side1_thumbnail.png",
-            "full": "side1.jpg"
+            "thumbnail": "mk1/side1_thumbnail.png",
+            "alt": [
+                {
+                    "src": "mk1/side1_small.jpg",
+                    "maxwidth": "639px"
+                },
+                {
+                    "src": "mk1/side1_medium.jpg",
+                    "maxwidth": "1023px",
+                    "minwidth": "640px"
+                },
+                {
+                    "src": "mk1/side1_large.jpg",
+                    "minwidth": "1024px"
+                }
+            ]
         },
         {
             "id": "side-2",
-            "thumbnail": "side2_thumbnail.png",
-            "full": "side2.jpg"
+            "thumbnail": "mk1/side2_thumbnail.png",
+            "alt": [
+                {
+                    "src": "mk1/side2_small.jpg",
+                    "maxwidth": "639px"
+                },
+                {
+                    "src": "mk1/side2_medium.jpg",
+                    "maxwidth": "1023px",
+                    "minwidth": "640px"
+                },
+                {
+                    "src": "mk1/side2_large.jpg",
+                    "minwidth": "1024px"
+                }
+            ]
         },
         {
             "id": "side-3",
-            "thumbnail": "side3_thumbnail.png",
-            "full": "side3.jpg"
+            "thumbnail": "mk1/side3_thumbnail.png",
+            "alt": [
+                {
+                    "src": "mk1/side3_small.jpg",
+                    "maxwidth": "639px"
+                },
+                {
+                    "src": "mk1/side3_medium.jpg",
+                    "maxwidth": "1023px",
+                    "minwidth": "640px"
+                },
+                {
+                    "src": "mk1/side3_large.jpg",
+                    "minwidth": "1024px"
+                }
+            ]
         }
     ]
 }

@@ -1,7 +1,7 @@
 {% macro deviceImages(site, helpers, device_images) -%}
 {% for image in device_images %}
 <div class="large reveal" id="{{ image.id }}" data-reveal data-v-offset="10px">
-    {{ helpers.image(site, image.full) }}
+    {{ helpers.picture(site, image) }}
     <button class="close-button" data-close aria-label="Close reveal" type="button">
         <span aria-hidden="true">&times;</span>
     </button>
