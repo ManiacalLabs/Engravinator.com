@@ -22,6 +22,27 @@ body {
     background-color: #fff;
 }
 
+a {
+    color: #f36926;
+}
+
+a:hover,
+a:focus {
+    color: #c03600;
+}
+
+button.button,
+input.button {
+    background-color: #f36926;
+}
+
+button.button:hover,
+button.button:focus,
+input.button:hover,
+input.button:focus {
+    background-color: #c03600;
+}
+
 footer,
 #menu,
 #footer-who a,
