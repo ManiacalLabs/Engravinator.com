@@ -11,6 +11,7 @@ cache:
   directories:
     - $HOME/.cache/bower
     - $HOME/.npm
+    - $HOME/bower_components
 before_script:
   - npm run lint
 script:
