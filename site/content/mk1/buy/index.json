@@ -291,12 +291,12 @@
 				{
 					"part_price": 7.98,
 					"quantity": 2,
-					"name": "TMC2208 STEPSTICK",
-					"part_number": "1460-1201-ND",
+					"name": "TMC2100 STEPSTICK",
+					"part_number": "1460-1159-ND",
 					"price_per_unit": 7.98,
 					"minimum_quantity": 1,
 					"note": "",
-					"url": "https://www.digikey.com/product-detail/en/trinamic-motion-control-gmbh/TMC2208-SILENTSTEPSTICK/1460-1201-ND/6873626"
+					"url": "https://www.digikey.com/product-detail/en/trinamic-motion-control-gmbh/TMC-SILENTSTEPSTICK/1460-1159-ND/5724190"
 				}
 			]
 		},
