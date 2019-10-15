@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ManiacalLabs/Engravinator.com.svg?branch=master)](https://travis-ci.org/ManiacalLabs/Engravinator.com)
+
 # Engravinator.com Site Code
 
 This code drives the [Engravinator](http://engravinator.com) site.  For information about the Engravinator project, checkout the [GitHub repo](https://github.com/ManiacalLabs/Engravinator)
@@ -18,4 +20,4 @@ Local development requires node and npm to be installed.
 3. Run `npm run watch` to start up a local server at `http://localhost:9000` with the contents of the site.  Changes should force the server to refresh.
 
 ## Deployment
-[Travis-ci.org](https://travis-ci.org/ManiacalLabs/Engravinator.com/) deploys the site using [gulp-gh-pages](https://www.npmjs.com/package/gulp-gh-pages) to the gh-pages branch.
+[Travis-ci.org](https://travis-ci.org/ManiacalLabs/Engravinator.com/) deploys the site using [github pages provider](https://docs.travis-ci.com/user/deployment/pages/) in Travis to the gh-pages branch.
