@@ -69,9 +69,9 @@ Just make sure it meets the specs listed above.
 
 ## Controller & Stepper Drivers
 
-The [Maniacal Labs Platypus](https://maniacallabs.com/platypus) controller was designed specifically with the Engravinator in mind and all guides assume you will be using this controller. However, any 2+ axis controller with laser support should work fine. So if you have a preferred controller we won't be insulted
+The [Maniacal Labs Platypus](https://maniacallabs.com/platypus) controller was designed specifically with the Engravinator in mind and all guides assume you will be using this controller. However, any 2+ axis controller with laser support should work fine. So if you have a preferred controller, we won't be insulted.
 
-For stepper drivers, if your controller of course does not have them built in, we highly recommend the TMC2208 SilentStepStick, as listed in the BOM. Any StepStick / Pololu style driver that supports at least 1/16 microstepping should work though.
+For stepper drivers, if your controller does not have them built in, we highly recommend the TMC2208 SilentStepStick, as listed in the BOM. Any StepStick / Pololu style driver that supports at least 1/16 microstepping should work though.
 
 ## Wiring
 
@@ -87,7 +87,7 @@ You might be tempted to just buy a long length of 2020 extrusion and cut your ow
 
 No, don't just resist: **DO NOT CUT YOUR OWN EXTRUSIONS!**
 
-The Engravinator is designed with tight tolerances and the aluminum extrusion creates the foundation of the entire machine. Which must be perfectly square and of exact size. All the extrusions from Misumi, cut to within 0.5mm of the required length, are only $36 for the set and well worth the cost.
+The Engravinator is designed with tight tolerances, and the aluminum extrusion creates the foundation of the entire machine. It must be perfectly square, and of exact size. All the extrusions from Misumi, cut to within 0.5mm of the required length, are only $36 for the set and well worth the cost.
 
 ## Miscellaneous
 

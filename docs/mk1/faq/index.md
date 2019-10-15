@@ -6,9 +6,9 @@ page_title: Engravinator Mk1 &mdash; FAQ
 
 ## Why did you create the Engravinator?
 
-It started with a conversation about woodworking. We wanted to be able to engrave a custom maker's mark on something large like furniture but most engravers assumed the material would be brought to the machine. This was not feasible in many cases. So the idea for a super-portable engraver with small working area that could be brought to the material was born.
+It started with a conversation about woodworking. We wanted to be able to engrave a custom maker's mark on something large like furniture, but most engravers assume the material will be brought to the machine. This is not feasible in many cases. So the idea for a super-portable engraver with small working area that could be brought to the material was born.
 
-To take things further, most engravers in the $200 - $400 price range were, in our opinion, of poor build quality and precision. Using simple wheels and belts for motion. So we sought to hit the same price point but with higher quality and precision motion components.
+To take things further, most engravers in the $200 - $400 price range were, in our opinion, of poor build quality and precision, due to using simple wheels and belts for motion. So we sought to hit the same price point but with higher quality and more precise motion components.
 
 ## Is it Open Source?
 
@@ -67,7 +67,7 @@ But with all of the CAD designs provided it would be easy to design any addon yo
 
 ## What types of materials can it engrave?
 
-First, please note: The Engravinator is **not** meant for cutting! It does not have a proper bed required for cleaning cutting through materials. Please stick to engraving.
+First, please note: The Engravinator is **not** meant for cutting! It does not have a proper bed required for clean cutting through materials. Please stick to engraving.
 
 This is largely dependent on your laser module of choice, but assuming you are using a standard UV diode laser you will generally want to stick to darker, organic materials. Overly white or clean materials will not absorb enough of the laser to work correctly. Materials we've found to work well include (but are not limited to):
 
