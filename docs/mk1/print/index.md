@@ -24,7 +24,7 @@ Final word on quality and accuracy: The Engravinator is designed with relatively
 
 ## Object Orientation
 
-All provided STL files have been exported in the orientation that they **must** be printed in! Therefore, if you are printing components individually, instead of the provided full print plates, **do not** change the model orientation when printing. Yes, this is so important that it got it's own section.
+All provided STL files have been exported in the orientation that they **must** be printed in! Therefore, if you are printing components individually, instead of the provided full print plates, **do not** change the model orientation when printing. Yes, this is so important that it got its own section.
 
 ## Core Components
 
