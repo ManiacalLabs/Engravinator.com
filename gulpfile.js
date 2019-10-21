@@ -13,6 +13,7 @@ var data = require('gulp-data');
 var frontmatter = require('gulp-front-matter');
 var htmlmin = require('gulp-htmlmin');
 var markdown = require('gulp-markdown');
+var uglify = require('gulp-uglify');
 
 var nunjucks = require('gulp-nunjucks-render');
 var numeralFilter = require('nunjucks-numeral-filter');
@@ -28,7 +29,8 @@ var PATHS = {
     },
     IMAGES: {
         SRC: SITE + '/assets/images/**',
-        DEST: DIST + '/images'
+        DEST: DIST + '/images',
+        BOWER_DEST: DIST + '/img'
     },
     FONTS: {
         SRC: SITE + '/assets/fonts/**',
@@ -37,7 +39,7 @@ var PATHS = {
     DOCS: {
         SRC: DOCS + '/**/*.md',
         IMAGES: {
-            SRC: DOCS + '/mk1/img/*.gif',
+            SRC: DOCS + '/mk1/img/**',
             DEST: DIST + '/mk1/img/'
         },
         DATA: DOCS + '/**/*.json',
@@ -48,7 +50,10 @@ var PATHS = {
         DATA: SITE + '/content/**/*.json',
         DEST: DIST + '/**/*.html'
     },
-    SCRIPTS: { DEST: DIST + '/js' },
+    SCRIPTS: {
+        SRC: SITE + '/assets/js/**',
+        DEST: DIST + '/js'
+    },
     TEMPLATES: { SRC: SITE + '/assets/templates' }
 };
 
@@ -58,9 +63,23 @@ var BOWER_SCRIPTS = [
     'bower_components/foundation-sites/dist/js/foundation.min.js'
 ];
 
+var BOWER_MAPS = [
+    {
+        src: 'bower_components/what-input/dist/maps/what-input.min.js.map',
+        dest: PATHS.SCRIPTS.DEST + '/maps'
+    },
+    {
+        src: 'bower_components/foundation-sites/dist/js/foundation.min.js.map',
+        dest: PATHS.SCRIPTS.DEST
+    },
+    {
+        src: 'bower_components/foundation-sites/dist/css/foundation.min.css.map',
+        dest: PATHS.CSS.DEST
+    }
+];
+
 var BOWER_STYLES = [
-    'bower_components/foundation-sites/dist/css/foundation.min.css',
-    'bower_components/foundation-sites/dist/css/foundation.min.css.map'
+    'bower_components/foundation-sites/dist/css/foundation.min.css'
 ];
 
 var DOCS_PRE = '{% extends "base.html" %}\n{% block content %}\n<div class="grid-container">\n';
@@ -161,12 +180,28 @@ function bowerscripts() {
 }
 
 /**
+ * Copies all the bower maps
+ * @returns {Object} The task stream
+ */
+function bowermaps() {
+    var tasks = [];
+
+    BOWER_MAPS.forEach(function (map) {
+        tasks.push(gulp.src(map.src).pipe(gulp.dest(map.dest)));
+    });
+
+    return merge(tasks);
+}
+
+/**
  * Copy all the bower styles
  * @returns {Object} The task stream
  */
 function bowerstyles() {
     return copylist(BOWER_STYLES, PATHS.CSS.DEST);
 }
+
+var bower = gulp.parallel(bowerscripts, bowermaps, bowerstyles);
 
 /**
  * Copies all the custom styles
@@ -179,7 +214,20 @@ function customstyles() {
         .pipe(connect.reload());
 }
 
-var styles = gulp.parallel(customstyles, bowerstyles);
+var styles = gulp.parallel(customstyles);
+
+/**
+ * Copies all the custom scripts
+ * @returns {Object} The task stream
+ */
+function customscripts() {
+    return gulp.src(PATHS.SCRIPTS.SRC)
+        .pipe(uglify())
+        .pipe(gulp.dest(PATHS.SCRIPTS.DEST))
+        .pipe(connect.reload());
+}
+
+var scripts = gulp.parallel(customscripts);
 
 /**
  * Copies all the images
@@ -358,6 +406,7 @@ function watch() {
     gulp.watch(PATHS.IMAGES.SRC, images);
     gulp.watch(PATHS.DOCS.IMAGES.SRC, docimages);
     gulp.watch(PATHS.FONTS.SRC, fonts);
+    gulp.watch(PATHS.SCRIPTS.SRC, scripts);
     gulp.watch([ PATHS.TEMPLATES.SRC, PATHS.PAGES.SRC, PATHS.PAGES.DATA, PATHS.DOCS.SRC, PATHS.DOCS.DATA ], pages);
 
     connect.server({
@@ -370,7 +419,7 @@ function watch() {
 
 var pages = gulp.series(static_html, docs);
 var cleanall = gulp.parallel(cleanpages, cleanimages, cleanfonts, cleanscripts, cleanstyles);
-var assets = gulp.series(bowerscripts, styles, images, docimages, fonts, pages);
+var assets = gulp.series(bower, styles, scripts, images, docimages, fonts, pages);
 var default_task = gulp.series(cleanall, assets);
 
 exports.default = default_task;

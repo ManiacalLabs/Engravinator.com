@@ -45,6 +45,7 @@
     "gulp-htmlmin": "^5.0.1",
     "gulp-markdown": "^5.0.0",
     "gulp-nunjucks-render": "^2.2.3",
+    "gulp-uglify": "^3.0.2",
     "lodash": "^4.17.15",
     "lodash.template": ">=4.5.0",
     "merge-stream": "^2.0.0",
