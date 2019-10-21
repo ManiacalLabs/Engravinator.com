@@ -1,7 +1,8 @@
 {% import "partials/helpers.html" as helpers %}
 {% from "partials/header.html" import header %}
 {% from "partials/footer.html" import footer %}
-{% from "partials/navigation.html" import navigation%}
+{% from "partials/navigation.html" import navigation %}
+{% from "partials/scripts.html" import scripts %}
 
 <!doctype html>
 <html class="no-js" lang="en">
@@ -20,18 +21,7 @@
 
         {{ footer(site, helpers) }}
     </div>
-    <script src="{{ helpers.getAbsolutePath(site, 'js/jquery.min.js') }}"></script>
-    <script src="{{ helpers.getAbsolutePath(site, 'js/what-input.min.js') }}"></script>
-    <script src="{{ helpers.getAbsolutePath(site, 'js/foundation.min.js') }}"></script>
-    <script>
-        $(document).foundation();
-    </script>
 
-<script>
-        jQuery(window).on('changed.zf.mediaquery', function() {
-            $('.is-dropdown-submenu.invisible').removeClass('invisible');
-          });
-</script>
+    {{ scripts(site, helpers, data) }}
 </body>
-
 </html>

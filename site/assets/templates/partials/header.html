@@ -6,6 +6,10 @@
 <link rel="stylesheet" href="{{ helpers.getAbsolutePath(site, 'css/foundation.min.css') }}" />
 <link rel="stylesheet" href="{{ helpers.getAbsolutePath(site, 'css/base.css') }}" />
 
+{% if data.photogallery %}
+<link rel="stylesheet" href="{{ helpers.getAbsolutePath(site, 'css/photogallery.css') }} " />
+{% endif %}
+
 {% for style in data.include_styles %}
 <link rel="stylesheet" href="{{ helpers.getAbsolutePath(site, 'css/' + style + '.css') }}" />
 {% endfor %}

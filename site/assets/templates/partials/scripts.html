@@ -1,0 +1,20 @@
+{% macro scripts(site, helpers, data) -%}
+<script src="{{ helpers.getAbsolutePath(site, 'js/jquery.min.js') }}"></script>
+<script src="{{ helpers.getAbsolutePath(site, 'js/what-input.min.js') }}"></script>
+<script src="{{ helpers.getAbsolutePath(site, 'js/foundation.min.js') }}"></script>
+
+{% if data.photogallery %}
+<script src="{{ helpers.getAbsolutePath(site, 'js/imagelightbox.min.js') }}"></script>
+<script src="{{ helpers.getAbsolutePath(site, 'js/lightboximpl.js') }}"></script>
+{% endif %}
+
+<script>
+    $(document).foundation();
+</script>
+
+<script>
+    jQuery(window).on('changed.zf.mediaquery', function () {
+        $('.is-dropdown-submenu.invisible').removeClass('invisible');
+    });
+</script>
+{%- endmacro %}
