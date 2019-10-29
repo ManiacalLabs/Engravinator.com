@@ -5,10 +5,30 @@
     display: inline-block;
 }
 
-.red {background-color: red;}
-.orange {background-color: orange;}
-.yellow {background-color: yellow;}
-.green {background-color: lime;}
-.cyan {background-color: aqua;}
-.blue {background-color: blue;}
-.purple {background-color: fuchsia;}
+.red {
+    background-color: red;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.green {
+    background-color: lime;
+}
+
+.cyan {
+    background-color: aqua;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.purple {
+    background-color: fuchsia;
+}

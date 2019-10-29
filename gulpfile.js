@@ -54,6 +54,10 @@ var PATHS = {
         SRC: SITE + '/assets/js/**',
         DEST: DIST + '/js'
     },
+    LIBRARIES: {
+        SRC: SITE + '/assets/jslibs/**',
+        DEST: DIST + '/js'
+    },
     TEMPLATES: { SRC: SITE + '/assets/templates' }
 };
 
@@ -227,7 +231,16 @@ function customscripts() {
         .pipe(connect.reload());
 }
 
-var scripts = gulp.parallel(customscripts);
+/**
+ * Copies all the javascript libraries
+ * @returns {Object} The task stream
+ */
+function jslibraries() {
+    return gulp.src(PATHS.LIBRARIES.SRC)
+        .pipe(gulp.dest(PATHS.LIBRARIES.DEST));
+}
+
+var scripts = gulp.parallel(customscripts, jslibraries);
 
 /**
  * Copies all the images
