@@ -377,12 +377,32 @@
 				{
 					"part_price": 45,
 					"quantity": 1,
-					"name": "2422 Orange",
+					"name": "2422 Orange Acrylic, 1/8\"",
 					"part_number": "See BOM Guide",
 					"price_per_unit": 45,
 					"minimum_quantity": 1,
 					"note": "",
 					"url": "https://engravinator.com/mk1/BOM_Guide.html"
+				},
+				{
+					"part_price": 5,
+					"quantity": 1,
+					"name": "80x25mm 12V Fan",
+					"part_number": "Amazon",
+					"price_per_unit": 5,
+					"minimum_quantity": 1,
+					"note": "",
+					"url": "https://www.amazon.com/80mm-25mm-High-Output-8025/dp/B01FBPQG0Q/"
+				},
+				{
+					"part_price": 2,
+					"quantity": 1,
+					"name": "Carbon Filter Sheet",
+					"part_number": "Amazon",
+					"price_per_unit": 2,
+					"minimum_quantity": 1,
+					"note": "",
+					"url": "https://www.amazon.com/Extractor-Replacement-Activated-Absorber-Xytronic/dp/B07D5SBPN8/"
 				}
 			]
 		},
