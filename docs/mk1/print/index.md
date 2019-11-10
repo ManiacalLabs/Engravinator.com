@@ -15,7 +15,8 @@ All components should be printed in PLA with the following settings:
 
 -   0.4mm nozzle diameter
 -   0.2mm layer height
--   20% Grid Infill
+-   3 shells / 3 top & bottom lasers
+-   25% Grid Infill
 -   Top & Bottom layers Rectilinear Infill
 
 Any other settings would depend on your particular filament and printer capability but we recommend using high quality filament with consistent diameter. We are partial to Atomic Filament or Prusa brands (though are in no way sponsored by those companies).
