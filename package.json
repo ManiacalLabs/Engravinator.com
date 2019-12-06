@@ -20,6 +20,9 @@
       [
         "remark-lint-final-newline",
         false
+      ],
+      [
+        "lint-list-item-indent", "space"
       ]
     ]
   },

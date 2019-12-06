@@ -28,16 +28,16 @@ We tried to keep the design as simple and easy to build as possible. All the har
 
 The only tools required are:
 
--   4mm Hex Key
--   2.5mm Hex Key
--   2mm Hex Key
--   1.5mm Hex Key
--   Flush Cut Snippers
--   Wire Strippers
--   Scissors
--   Square
--   Soldering Iron
--   Flat Surface
+- 4mm Hex Key
+- 2.5mm Hex Key
+- 2mm Hex Key
+- 1.5mm Hex Key
+- Flush Cut Snippers
+- Wire Strippers
+- Scissors
+- Square
+- Soldering Iron
+- Flat Surface
 
 For more information, please check out the [Assembly Guide](/mk1/build/).
 
@@ -71,12 +71,12 @@ First, please note: The Engravinator is **not** meant for cutting! It does not h
 
 This is largely dependent on your laser module of choice, but assuming you are using a standard UV diode laser you will generally want to stick to darker, organic materials. Overly white or clean materials will not absorb enough of the laser to work correctly. Materials we've found to work well include (but are not limited to):
 
--   Paper / Cardstock (not white)
--   Cardboard
--   Poplar
--   Birch
--   Balsa
--   Cherry
--   MDF
--   Slate
--   Cork
+- Paper / Cardstock (not white)
+- Cardboard
+- Poplar
+- Birch
+- Balsa
+- Cherry
+- MDF
+- Slate
+- Cork
