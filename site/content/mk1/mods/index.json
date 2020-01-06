@@ -3,8 +3,10 @@
 	"include_styles": [],
 	"mods": [
 		{
-			"title": "Pen Plotter",
-			"url": "https://google.com"
+			"title": "Pen Lift",
+			"url": "https://github.com/ManiacalLabs/Engravinator/tree/master/Mods/PenLift",
+			"image": "penlift.png",
+			"description": "So, maybe lasers aren't your thing and you prefer ink? Just install this pen lift mechanism that is a drop in replacement for the laser module."
 		}
 	]
 }

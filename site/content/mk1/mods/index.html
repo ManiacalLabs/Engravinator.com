@@ -2,8 +2,10 @@
 {% import "partials/helpers.html" as helpers %}
 
 {% macro mod_entry(mod) -%}
-<div>
-    <h2>{{ mod.title }}</h2>
+<div class="cell medium-4">
+    <h2 class="h3"><a href="{{ mod.url }}">{{ mod.title }}</a></h2>
+    <a href="{{ mod.url }}">{{ helpers.image(site, 'mk1/mods/' + mod.image, 'thumbnail') }}</a>
+    <p>{{ mod.description | safe }}</p>
 </div>
 {%- endmacro %}
 
@@ -15,11 +17,9 @@
         </div>
     </div>
     <div class="grid-x grid-margin-x">
-        <div class="cell margin-medium-vertical">
-            {% for mod in data.mods %}
-                {{ mod_entry(mod) }}
-            {% endfor %}
-        </div>
+        {% for mod in data.mods %}
+        {{ mod_entry(mod) }}
+        {% endfor %}
     </div>
 </div>
 {% endblock %}
