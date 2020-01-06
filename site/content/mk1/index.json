@@ -53,6 +53,13 @@
             "icon": "icons/tool.png",
             "url": "/mk1/build",
             "copy": "Once you've got all the parts we've got the <a href=\"/mk1/build\">build steps</a> all ready for you."
+        },
+        {
+            "title": "Mod",
+            "subtitle": "Modify the MK1",
+            "icon": "icons/settings.png",
+            "url": "/mk1/mods",
+            "copy": "Want to take your Engravinator to the next level?  Check out the awesome <a href=\"/mk1/mods\">mods</a> available."
         }
     ],
     "features": [

@@ -4,6 +4,19 @@
 
 This code drives the [Engravinator](http://engravinator.com) site.  For information about the Engravinator project, checkout the [GitHub repo](https://github.com/ManiacalLabs/Engravinator)
 
+# Add new mod
+Adding a new mod to the mods page is pretty straight forward
+
+1. Host your mod somewhere (we prefer GitHub and an Open Source license)
+2. Get a photo / render of your mod in a PNG file that is 350px x 150px
+3. Add the photo to `site/assets/images/mk1/mods/`
+4. Update the `site/content/mk1/mods/index.json` file and add your mod to the `mods` list in the JSON file with the following information
+    * **title**: The name of the mod.
+    * **url**: The link to the mod.
+    * **image**: The PNG filename that is in the `site/assets/images/mk1/mods/` directory.
+    * **description**: A concise description of what the mod does.
+5. Create a PR with your new mod
+
 # Structure
 The site is driven by [Nunjucks](https://mozilla.github.io/nunjucks/) and [Foundation](https://foundation.zurb.com/sites.html) and then compiled using [Gulp](https://gulpjs.com/).
 
