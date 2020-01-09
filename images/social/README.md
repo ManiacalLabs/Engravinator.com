@@ -1,0 +1,1 @@
+Social icons are used under [MIT License](https://github.com/colebemis/feather/blob/master/LICENSE) from [Feather](https://github.com/feathericons/feather)
