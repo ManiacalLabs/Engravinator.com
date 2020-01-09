@@ -2,7 +2,7 @@ name: Broken Link Checker
 
 on:
   schedule:
-    - cron: '30 9 * * 1'
+    - cron: '30 10 * * *'
   push:
     branches:
       - gh-pages
