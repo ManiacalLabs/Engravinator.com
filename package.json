@@ -22,7 +22,8 @@
         false
       ],
       [
-        "lint-list-item-indent", "space"
+        "lint-list-item-indent",
+        "space"
       ]
     ]
   },
@@ -39,6 +40,7 @@
   "dependencies": {},
   "devDependencies": {
     "bower": "^1.8.8",
+    "broken-link-checker": "^0.7.8",
     "eslint": "^6.2.2",
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",

@@ -3,7 +3,7 @@ page_title: Engravinator Mk1 &mdash; Print
 ---
 # Engravinator Mk1 &mdash; Print
 
-The Engravinator is specifically designed to utilize the benefits of 3D printed components as much as possible. All of the core, required, non-metal components can be printed on most commodity 3D printers. If you do not access to a 3D printer there are many online services such as [MakeXYZ](https://makexyz.com) or [Shapeways](https://shapeways.com) that could print them for you. However, going the online service route could add significant cost. We recommend first trying to find a makerspace, library, or school in your area that might have a printer you can use.
+The Engravinator is specifically designed to utilize the benefits of 3D printed components as much as possible. All of the core, required, non-metal components can be printed on most commodity 3D printers. If you do not access to a 3D printer there are many online services such as [MakeXYZ](https://www.makexyz.com) or [Shapeways](https://shapeways.com) that could print them for you. However, going the online service route could add significant cost. We recommend first trying to find a makerspace, library, or school in your area that might have a printer you can use.
 
 While there are links to individual files listed here we recommend downloading the entire [Engravinator repository](https://github.com/ManiacalLabs/Engravinator/archive/master.zip) which will include all required files.
 
