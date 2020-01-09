@@ -53,7 +53,7 @@ Also be sure to get standard fiber reinforced belts. **Do not** use steel reinfo
 
 The Engravinator was designed to fit the commonly found Chinese PWM laser modules that use a 16x40mm M3 mounting pattern. Please note that you **must** use a PWM laser, not TTL! Those are two different things. We recommend looking for a module that includes the driver board on the module itself as there's not accommodations for mounting an external driver board.
 
-We've had exceptional experience with the modules from EleksMaker, especially the [EL01](http://store.eleksmaker.com/index.php?route=product/product&path=101&product_id=163) which can be had in 0.5W and 2.5W versions.
+We've had exceptional experience with the modules from EleksMaker, especially the [EL01](https://www.aliexpress.com/item/32977167192.html) which can be had in 0.5W and 2.5W versions.
 
 Otherwise, we recommend looking on Amazon, eBay, or Aliexpress.
 
