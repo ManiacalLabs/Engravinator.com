@@ -57,8 +57,8 @@ If you either have a smaller printer or just want to print individual components
 
 Since there are multiple options for supported controllers, you will need to at least print one of the following base plates, for your controller:
 
-- [Maniacal Labs Platypus](https://github.com/ManiacalLabs/Platypus) -> [BasePlate_Platypus.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Controller_Box/BasePlate_Platypus.stl)
-- [Bart Dring Pen/Laser Controller](https://www.tindie.com/products/33366583/penlaser-bot-controller/) -> [BasePlate_BartDring_PenLaserController.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Controller_Box/BasePlate_BartDring_PenLaserController.stl)
+- [Maniacal Labs Platypus](https://github.com/ManiacalLabs/Platypus) &rarr; [BasePlate_Platypus.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Controller_Box/BasePlate_Platypus.stl)
+- [Bart Dring Pen/Laser Controller](https://www.tindie.com/products/33366583/penlaser-bot-controller/) &rarr; [BasePlate_BartDring_PenLaserController.stl](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Controller_Box/BasePlate_BartDring_PenLaserController.stl)
 
 Then, optionally print the cover which fits on all provided base plates:
 
@@ -90,7 +90,7 @@ You will need to cut one each of the following DXF files:
 
 Optionally, we've designed a bottom panel that aids with aligning the laser (since the working area is not centered to the machine). The actual working area position is dependent on the laser module in use. Select the necessary one below based on the module X,Y dimensions:
 
-- 33mm x 33mm -> [TargetingFrame_33x33.svg](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/Laser_Cut/TargetingFrame_33x33.svg)
+- 33mm x 33mm &rarr; [TargetingFrame_33x33.svg](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/Laser_Cut/TargetingFrame_33x33.svg)
 
 Note that the linked file is an SVG instead of DXF. This is because the black lines should be cut but the red lines just need to be engraved as they are simple measurement markings.
 
