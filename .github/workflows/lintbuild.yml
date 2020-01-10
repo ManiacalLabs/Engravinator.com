@@ -1,13 +1,10 @@
-name: Broken Link Checker
+name: Lint and Build
 
 on:
-  schedule:
-    - cron: '30 14 * * *'
-  deployment:
+  push:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -20,9 +17,11 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: link checker
+    - name: Lint and build
       run: |
-        npm install broken-link-checker
-        ./node_modules/bin/blc https://engravinator.com -ro
+        npm ci
+        npm run lint
+        npm run bower
+        npm run build
       env:
         CI: true
