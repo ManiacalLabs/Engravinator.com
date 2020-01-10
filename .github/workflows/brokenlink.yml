@@ -2,7 +2,7 @@ name: Broken Link Checker
 
 on:
   schedule:
-    - cron: '30 10 * * *'
+    - cron: '30 14 * * *'
   deployment:
 
 jobs:
