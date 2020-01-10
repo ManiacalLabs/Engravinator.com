@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/ManiacalLabs/Engravinator.com.svg?branch=master)](https://travis-ci.org/ManiacalLabs/Engravinator.com)
+[![Build Status](https://github.com/ManiacalLabs/Engravinator.com/workflows/Build%20Page/badge.svg)](https://github.com/ManiacalLabs/Engravinator.com/actions?query=workflow%3A%22Build+Page%22)
 
 # Engravinator.com Site Code
 
@@ -33,4 +33,4 @@ Local development requires node and npm to be installed.
 3. Run `npm run watch` to start up a local server at `http://localhost:9000` with the contents of the site.  Changes should force the server to refresh.
 
 ## Deployment
-[Travis-ci.org](https://travis-ci.org/ManiacalLabs/Engravinator.com/) deploys the site using [github pages provider](https://docs.travis-ci.com/user/deployment/pages/) in Travis to the gh-pages branch.
+[GitHub Actions](https://github.com/ManiacalLabs/Engravinator.com/actions?query=workflow%3A%22Build+Page%22) deploys the site using [github pages deploy action](https://github.com/JamesIves/github-pages-deploy-action) to the gh-pages branch.
