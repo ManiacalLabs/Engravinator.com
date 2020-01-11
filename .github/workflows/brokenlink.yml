@@ -3,7 +3,6 @@ name: Broken Link Checker
 on:
   schedule:
     - cron: '30 14 * * *'
-  deployment:
 
 jobs:
   build:
@@ -23,6 +22,6 @@ jobs:
     - name: link checker
       run: |
         npm install broken-link-checker
-        ./node_modules/bin/blc https://engravinator.com -ro
+        ./node_modules/.bin/blc https://engravinator.com -ro
       env:
         CI: true
