@@ -90,7 +90,7 @@ const DOC_NAVIGATION_LINES = [
     '<div class="doc_nav grid-x grid-padding-x">',
     '<div class="cell small-4 text-left align-self-middle">',
     '{% if data.prev_url %}',
-    '<a class="nav_prev" href="{{ data.prev_url }}"><span class="arrow">&larr;</span> {{ data.prev_text }}</a>',
+    '<a class="nav_prev" href="{{ data.prev_url }}"><span class="arrow">&laquo;</span> {{ data.prev_text }}</a>',
     '{% endif %}',
     '</div>',
     '<div class="cell small-4 text-center align-self-middle">',
@@ -100,7 +100,7 @@ const DOC_NAVIGATION_LINES = [
     '</div>',
     '<div class="cell small-4 text-right align-self-middle">',
     '{% if data.next_url %}',
-    '<a class="nav_next" href="{{ data.next_url }}">{{ data.next_text }} <span class="arrow">&rarr;</span></a>',
+    '<a class="nav_next" href="{{ data.next_url }}">{{ data.next_text }} <span class="arrow">&raquo;</span></a>',
     '{% endif %}',
     '</div>',
     '</div>'
