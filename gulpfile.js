@@ -1,28 +1,28 @@
-var fs = require('fs');
-var path = require('path');
-var through = require('through2');
+const fs = require('fs');
+const path = require('path');
+const through = require('through2');
 
-var lodash = require('lodash');
-var merge = require('merge-stream');
+const lodash = require('lodash');
+const merge = require('merge-stream');
 
-var gulp = require('gulp');
-var clean = require('gulp-clean');
-var cleanCSS = require('gulp-clean-css');
-var connect = require('gulp-connect');
-var data = require('gulp-data');
-var frontmatter = require('gulp-front-matter');
-var htmlmin = require('gulp-htmlmin');
-var markdown = require('gulp-markdown');
-var uglify = require('gulp-uglify');
+const gulp = require('gulp');
+const clean = require('gulp-clean');
+const cleanCSS = require('gulp-clean-css');
+const connect = require('gulp-connect');
+const data = require('gulp-data');
+const frontmatter = require('gulp-front-matter');
+const htmlmin = require('gulp-htmlmin');
+const markdown = require('gulp-markdown');
+const uglify = require('gulp-uglify');
 
-var nunjucks = require('gulp-nunjucks-render');
-var numeralFilter = require('nunjucks-numeral-filter');
+const nunjucks = require('gulp-nunjucks-render');
+const numeralFilter = require('nunjucks-numeral-filter');
 
-var DIST = __dirname + '/dist';
-var SITE = __dirname + '/site';
-var DOCS = __dirname + '/docs';
+const DIST = __dirname + '/dist';
+const SITE = __dirname + '/site';
+const DOCS = __dirname + '/docs';
 
-var PATHS = {
+const PATHS = {
     CSS: {
         SRC: SITE + '/assets/css/**',
         DEST: DIST + '/css'
@@ -61,13 +61,13 @@ var PATHS = {
     TEMPLATES: { SRC: SITE + '/assets/templates' }
 };
 
-var BOWER_SCRIPTS = [
+const BOWER_SCRIPTS = [
     'bower_components/jquery/dist/jquery.min.js',
     'bower_components/what-input/dist/what-input.min.js',
     'bower_components/foundation-sites/dist/js/foundation.min.js'
 ];
 
-var BOWER_MAPS = [
+const BOWER_MAPS = [
     {
         src: 'bower_components/what-input/dist/maps/what-input.min.js.map',
         dest: PATHS.SCRIPTS.DEST + '/maps'
@@ -82,20 +82,53 @@ var BOWER_MAPS = [
     }
 ];
 
-var BOWER_STYLES = [
+const BOWER_STYLES = [
     'bower_components/foundation-sites/dist/css/foundation.min.css'
 ];
 
-var DOCS_PRE = '{% extends "base.html" %}\n{% block content %}\n<div class="grid-container">\n';
-var DOCS_POST = '</div>\n{% endblock %}';
+const DOC_NAVIGATION_LINES = [
+    '<div class="doc_nav grid-x grid-padding-x">',
+    '<div class="cell small-4 text-left">',
+    '{% if data.prev_url %}',
+    '<a class="nav_prev" href="{{ data.prev_url }}">&larr; {{ data.prev_text }}</a>',
+    '{% endif %}',
+    '</div>',
+    '<div class="cell small-4 text-center">',
+    '{% if data.home_url %}',
+    '<a class="nav_home" href="{{ data.home_url }}">Home</a>',
+    '{% endif %}',
+    '</div>',
+    '<div class="cell small-4 text-right">',
+    '{% if data.next_url %}',
+    '<a class="nav_next" href="{{ data.next_url }}">{{ data.next_text }} &rarr;</a>',
+    '{% endif %}',
+    '</div>',
+    '</div>'
+];
 
-var clean_params = {
+const DOC_PRE_LINES = [
+    '{% extends "base.html" %}',
+    '{% block content %}',
+    '<div class="grid-container">',
+    lodash.join(DOC_NAVIGATION_LINES, '\n')
+];
+
+const DOC_POST_LINES = [
+    lodash.join(DOC_NAVIGATION_LINES, '\n'),
+    '</div>',
+    '{% endblock %}'
+];
+
+const DOCS_PRE = lodash.join(DOC_PRE_LINES, '\n');
+const DOCS_POST = lodash.join(DOC_POST_LINES, '\n');
+
+const clean_params = {
     read: false,
     allowEmpty: true
 };
 
-var DEVEL = process.env.DEVEL ? true : false;
-var BETA_URL = process.env.BETA_URL ? process.env.BETA_URL : '';
+const DEVEL = process.env.DEVEL ? true : false;
+const BETA_URL = process.env.BETA_URL ? process.env.BETA_URL : '';
 
 var site = {
     title: 'Engravinator',
@@ -205,7 +238,7 @@ function bowerstyles() {
     return copylist(BOWER_STYLES, PATHS.CSS.DEST);
 }
 
-var bower = gulp.parallel(bowerscripts, bowermaps, bowerstyles);
+const bower = gulp.parallel(bowerscripts, bowermaps, bowerstyles);
 
 /**
  * Copies all the custom styles
@@ -218,7 +251,7 @@ function customstyles() {
         .pipe(connect.reload());
 }
 
-var styles = gulp.parallel(customstyles);
+const styles = gulp.parallel(customstyles);
 
 /**
  * Copies all the custom scripts
@@ -240,7 +273,7 @@ function jslibraries() {
         .pipe(gulp.dest(PATHS.LIBRARIES.DEST));
 }
 
-var scripts = gulp.parallel(customscripts, jslibraries);
+const scripts = gulp.parallel(customscripts, jslibraries);
 
 /**
  * Copies all the images
@@ -287,7 +320,7 @@ function nunjucksEnvironment(env) {
  * @returns {String} The json data
  */
 function getJsonForFile(file, extension) {
-    var data_file = path.join(path.dirname(file.path), path.basename(file.path, '.' + extension) + '.json');
+    const data_file = path.join(path.dirname(file.path), path.basename(file.path, '.' + extension) + '.json');
     var data = { site: site };
     data.site.path = path.basename(file.path);
 
@@ -306,8 +339,8 @@ function getJsonForFile(file, extension) {
  * @returns {String} The json data
  */
 function docsData(file) {
-    var data = getJsonForFile(file, 'html');
-    var file_data = { data: lodash.assign({}, file.data) };
+    const data = getJsonForFile(file, 'html');
+    const file_data = { data: lodash.assign({}, file.data) };
 
     return lodash.assign({}, file_data, data);
 }
@@ -320,11 +353,11 @@ function docsData(file) {
  * @returns {undefined}
  */
 function templateDocs(file, enc, cb) {
-    var pre_file = Buffer.from(DOCS_PRE, 'utf8');
-    var contents = Buffer.from(file.contents, 'utf8');
-    var post_file = Buffer.from(DOCS_POST, 'utf8');
+    const pre_file = Buffer.from(DOCS_PRE, 'utf8');
+    const contents = Buffer.from(file.contents, 'utf8');
+    const post_file = Buffer.from(DOCS_POST, 'utf8');
 
-    var total_length = pre_file.length + contents.length + post_file.length;
+    const total_length = pre_file.length + contents.length + post_file.length;
 
     file.contents = Buffer.concat([ pre_file, contents, post_file ], total_length);
     cb(null, file);
@@ -337,8 +370,8 @@ function templateDocs(file, enc, cb) {
  * @returns {String} The heading
  */
 function heading_render(text, level) {
-    var style_class = level === 1 ? 'text-center' : '';
-    var id = text.toLowerCase().replace(/[^\w]+/g, '-');
+    const style_class = level === 1 ? 'text-center' : '';
+    const id = text.toLowerCase().replace(/[^\w]+/g, '-');
 
     return `<h${level} class="${style_class}" id="${id}">${text}</h${level}>`;
 }
@@ -348,12 +381,12 @@ function heading_render(text, level) {
  * @return {Object} The task stream
  */
 function docs() {
-    var nunjucks_config = {
+    const nunjucks_config = {
         path: PATHS.TEMPLATES.SRC,
         manageEnv: nunjucksEnvironment
     };
 
-    var frontmatter_config = {
+    const frontmatter_config = {
         property: 'data',
         remove: true
     };
@@ -378,7 +411,7 @@ function docs() {
  * @returns {String} The json data
  */
 function pageData(file) {
-    var data = getJsonForFile(file, 'html');
+    const data = getJsonForFile(file, 'html');
 
     if (file.path.endsWith('content/index.html')) {
         try {
@@ -397,7 +430,7 @@ function pageData(file) {
  * @return {Object} The task stream
  */
 function static_html() {
-    var nunjucks_config = {
+    const nunjucks_config = {
         path: PATHS.TEMPLATES.SRC,
         manageEnv: nunjucksEnvironment
     };
@@ -430,10 +463,10 @@ function watch() {
     });
 }
 
-var pages = gulp.series(static_html, docs);
-var cleanall = gulp.parallel(cleanpages, cleanimages, cleanfonts, cleanscripts, cleanstyles);
-var assets = gulp.series(bower, styles, scripts, images, docimages, fonts, pages);
-var default_task = gulp.series(cleanall, assets);
+const pages = gulp.series(static_html, docs);
+const cleanall = gulp.parallel(cleanpages, cleanimages, cleanfonts, cleanscripts, cleanstyles);
+const assets = gulp.series(bower, styles, scripts, images, docimages, fonts, pages);
+const default_task = gulp.series(cleanall, assets);
 
 exports.default = default_task;
 exports.build = default_task;

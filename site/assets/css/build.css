@@ -38,3 +38,25 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.grid-container {
+    margin-bottom: 1em;
+}
+
+.doc_nav_home {
+    text-align: center;
+}
+
+code.language-grbl {
+    /* stylelint-disable-next-line unit-whitelist */
+    border: 1px solid #cacaca;
+    background-color: #e6e6e6;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    font-weight: normal;
+    color: #0a0a0a;
+    display: block;
+    overflow: auto;
+    white-space: pre;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}

@@ -43,8 +43,8 @@ But you can also likely find them somewhere else like Amazon, eBay, or Aliexpres
 
 In small quantities we've never found a specific supplier from which to purchase belts and pulleys. We recommend Amazon, eBay, or Aliexpress. Just be absolutely sure that what you purchase matches the listed dimensions. We have designed the Engravinator to accommodate small variations in overall pulley size, however you should fine pulleys as close as possible to:
 
--   Drive: GT2-16 tooth, 5mm bore, 13mm OD, 6mm belt width
--   Idler: GT2-16 tooth, 3mm bore, 13mm OD, 6mm belt width
+- Drive: GT2-16 tooth, 5mm bore, 13mm OD, 6mm belt width
+- Idler: GT2-16 tooth, 3mm bore, 13mm OD, 6mm belt width
 
 For the belts, you need two 600mm sections of GT2-6mm belt. Note that some places may list it as 2GT which is the same thing. It *must* be 6mm wide though!
 Also be sure to get standard fiber reinforced belts. **Do not** use steel reinforced belts! The pulley radius is too small and they could break.
@@ -93,16 +93,19 @@ The Engravinator is designed with tight tolerances, and the aluminum extrusion c
 
 While the zip ties are absolutely required, the rest of the items listed here are merely recommended. Everything below can easily be found online or in your local hardware store.
 
--   **Zip Ties:** Strain relief is handled in many places via the use of small zip ties. The size you need should have roughly a 2.5mm x 1mm cross section and be at least 100mm long. This is typically the smallest size you will see for sale.
--   **Silicone/Rubber Feet:** These depend on how you will be using your Engravinator but we recommend 25mm x 25mm square, self-stick, silicone rubber feet. It will help keep the machine in place while engraving.
--   **Heat shrink tubing:** When soldering the wires to each of the limit switches, we highly recommend using short lengths of 3mm diameter heat shrink tubing to insulate the solder joints. Plus it just looks nicer :)
+- **Zip Ties:** Strain relief is handled in many places via the use of small zip ties. The size you need should have roughly a 2.5mm x 1mm cross section and be at least 100mm long. This is typically the smallest size you will see for sale.
+- **Silicone/Rubber Feet:** These depend on how you will be using your Engravinator but we recommend 25mm x 25mm square, self-stick, silicone rubber feet. It will help keep the machine in place while engraving.
+- **Heat shrink tubing:** When soldering the wires to each of the limit switches, we highly recommend using short lengths of 3mm diameter heat shrink tubing to insulate the solder joints. Plus it just looks nicer :)
 
 
 ## Enclosure Acrylic
 
 If you do not have access to a laser cutter and need someone else to cut the acrylic for you, please checkout the [Fabrication Guide](/mk1/print/#enclosure-laser-cut-parts).
 
-__*DISCLAIMER*__: *Our research has shown that the suggested acrylic below will block any and all dangerous light coming from the laser, making it safe to use without special glasses. However, without acquiring laboratory tested (and much more expensive) acrylic that is specifically validated for this use we cannot guarantee your complete eye safety. Maniacal Labs assumes no responsibility for any damage or injury caused by use of these designs.*
+<div class="callout warning">
+<h4>DISCLAIMER</h4>
+
+Our research has shown that the suggested acrylic below will block any and all dangerous light coming from the laser, making it safe to use without special glasses. However, without acquiring laboratory tested (and much more expensive) acrylic that is specifically validated for this use we cannot guarantee your complete eye safety. Maniacal Labs assumes no responsibility for any damage or injury caused by use of these designs.</div>
 
 If you have your own laser cutter (with at least a 400mm x 300mm working area) and want to cut your own enclosure panels, you'll need the right acrylic. It must be 3mm (1/8") thick, semi-transparent, and ideally orange, red, or green.
 

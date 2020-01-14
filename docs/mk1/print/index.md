@@ -69,7 +69,10 @@ Then, optionally print the cover which fits on all provided base plates:
 
 The full enclosure is an optional (but **HIGHLY RECOMMENDED!**) addon for the Engravinator. When made with the correct type of acrylic you can reasonably use the machine without worrying about safety glasses. If you do not opt to use the full enclosure: **NEVER** use the Engravinator without all people in the room wearing appropriate safety glasses.
 
-__*DISCLAIMER*__: *Our research has shown that the suggested acrylic below will block any dangerous light coming from the laser, making it safe to use without special glasses. However, without acquiring laboratory tested (and much more expensive) acrylic that is specifically validated for this use we cannot guarantee your complete eye safety. Maniacal Labs assumes no responsibility for any damage or injury caused by use of these designs.*
+<div class="callout warning">
+<h4>DISCLAIMER</h4>
+
+Our research has shown that the suggested acrylic below will block any dangerous light coming from the laser, making it safe to use without special glasses. However, without acquiring laboratory tested (and much more expensive) acrylic that is specifically validated for this use we cannot guarantee your complete eye safety. Maniacal Labs assumes no responsibility for any damage or injury caused by use of these designs.</div>
 
 ### Enclosure - Laser Cut Parts
 
