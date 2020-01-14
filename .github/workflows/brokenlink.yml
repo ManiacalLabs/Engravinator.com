@@ -19,7 +19,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: link checker
+    - name: Link checker
       run: |
         npm install broken-link-checker
         ./node_modules/.bin/blc https://engravinator.com -ro
