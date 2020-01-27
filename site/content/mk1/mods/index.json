@@ -7,6 +7,18 @@
 			"url": "https://github.com/ManiacalLabs/Engravinator/tree/master/Mods/PenLift",
 			"image": "penlift.png",
 			"description": "So, maybe lasers aren't your thing and you prefer ink? Just install this pen lift mechanism that is a drop in replacement for the laser module."
+		},
+		{
+			"title": "LightBurn Camera",
+			"url": "https://github.com/ManiacalLabs/Engravinator/tree/master/Mods/LightBurnCamera",
+			"image": "lbcamera.png",
+			"description": "Use a calibrated camera view in LightBurn to accurately place your engravings!"
+		},
+		{
+			"title": "4-inch Exhaust Adapter",
+			"url": "https://github.com/ManiacalLabs/Engravinator/tree/master/Mods/ExhaustDuctAdapter",
+			"image": "exhaust.png",
+			"description": "Is the 80mm exhaust fan and carbon filter just not cutting it? No worries, just print this 4-inch duct adapter and vent outside!"
 		}
 	]
 }
