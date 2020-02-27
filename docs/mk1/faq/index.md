@@ -22,6 +22,13 @@ It was designed specifically to be used the popular [Grbl](https://github.com/gn
 
 However, we provide mounts for multiple control boards, all of which can be found in the [fabrication files](https://github.com/ManiacalLabs/Engravinator/tree/master/Mk1/Fabrication/3D_Printed/Controller_Box). More details can be found in that directory along with each file.
 
+## How do I get an Engravinator?
+
+There's 2 ways:
+
+- Buy all the components yourself by following the directions on the [Buy page](/mk1/buy/).
+- Buy the full kit directly from Maniacal Labs on [Tindie](https://www.tindie.com/products/ManiacalLabs/engravinator-kit/)
+
 ## What do I need to build an Engravinator?
 
 We tried to keep the design as simple and easy to build as possible. All the hardware can be easily ordered from the links provided in the [Bill of Materials](/mk1/buy/). All other components are either 3D printed (required core components) or laser cut (optional enclosure) and more details can be found on the [Fabrication page](/mk1/print/).
