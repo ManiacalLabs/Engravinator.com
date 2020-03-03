@@ -30,14 +30,17 @@ a:focus {
 }
 
 button.button,
-input.button {
+input.button,
+a.button {
     background-color: #f36926;
 }
 
 button.button:hover,
 button.button:focus,
 input.button:hover,
-input.button:focus {
+input.button:focus,
+a.button:hover,
+a.button:focus {
     background-color: #c03600;
 }
 

@@ -412,10 +412,23 @@ function docs() {
  */
 function pageData(file) {
     const data = getJsonForFile(file, 'html');
+    var relative_path;
 
-    if (file.path.endsWith('content/index.html')) {
+    if (
+        file.path.endsWith('content/index.html')
+    ) {
+        relative_path = 'mk1/index.json';
+    }
+
+    if (
+        file.path.endsWith('content/mk1/buy/index.html')
+    ) {
+        relative_path = '../index.json';
+    }
+
+    if (relative_path) {
         try {
-            var mk1_file = path.join(path.dirname(file.path), 'mk1/index.json');
+            var mk1_file = path.join(path.dirname(file.path), relative_path);
             data.data.mk1 = JSON.parse(fs.readFileSync(mk1_file));
         } catch (err) {
             console.log('Unable to import Mk1 info to index.html');
