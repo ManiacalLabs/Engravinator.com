@@ -69,7 +69,7 @@ const BOWER_SCRIPTS = [
 
 const BOWER_MAPS = [
     {
-        src: 'bower_components/what-input/dist/maps/what-input.min.js.map',
+        src: 'bower_components/what-input/dist/what-input.min.js.map',
         dest: PATHS.SCRIPTS.DEST + '/maps'
     },
     {
