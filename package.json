@@ -58,7 +58,7 @@
     "nunjucks": "^3.2.0",
     "nunjucks-numeral-filter": "0.0.2",
     "remark": "^10.0.1",
-    "remark-cli": "^6.0.1",
+    "remark-cli": "^11.0.0",
     "remark-lint": "^6.0.5",
     "remark-preset-lint-recommended": "^3.0.3",
     "stylelint": "^11.1.1",
